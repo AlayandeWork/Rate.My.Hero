@@ -44,7 +44,7 @@ func move_state(delta):
 	move_and_slide()
 	velocity = velocity
 	
-	if Input.is_action_just_pressed("Attack"):
+	if Input.is_action_pressed("Attack"):
 		state = ATTACK
 		
 		
