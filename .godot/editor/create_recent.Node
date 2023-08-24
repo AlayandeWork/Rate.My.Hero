@@ -1,2 +1,7 @@
+Button
+Label
+Control
+TextEdit
+VBoxContainer
 RemoteTransform2D
 Camera2D

@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690310677
-default_env.tres::Environment::5132921972961010410::1690299481::0::1::::<><>::
+::res://::1692720656
+default_env.tres::Environment::5132921972961010410::1692631266::0::1::::<><>::
 full spritesheet.png::CompressedTexture2D::7724743500996390589::1578451375::1689052245::1::::<><>::
 full tilemap.png::CompressedTexture2D::7780887380732651885::1603337818::1689052245::1::::<><>::
 README.md::TextFile::-1::1690310594::0::1::::<><>::
@@ -68,12 +68,20 @@ slime_run_spritesheeet.png::CompressedTexture2D::4228507638211106396::1560306618
 Arrow.png::CompressedTexture2D::8807157432978186914::1652829540::1689202379::1::::<><>::
 Bow.png::CompressedTexture2D::5297250707414615049::1652829466::1689202379::1::::<><>::
 Player.png::CompressedTexture2D::5680155740059486733::1669967699::1689202379::1::::<><>::
-::res://Nodes/::1688511869
-::res://Nodes/Hero/::1690229870
-Hero.gd::GDScript::-1::1689177334::0::1::::<>CharacterBody2D<>::
-Hero.tscn::PackedScene::5616144987844389188::1690229870::0::1::::<><>::uid://cm6rlnpbhqtov::::res://Hero/Player.png<>res://Nodes/Hero/Hero.gd
-::res://Nodes/Main/::1690299482
-Main.tscn::PackedScene::5389908367785479546::1690299482::0::1::::<><>::uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>uid://di4ecwt2xabcv::::res://full tilemap.png<>uid://dib6nq1jlc1hh::::res://full spritesheet.png
+::res://Nodes/::1692347692
+Pixel_NES.otf::FontFile::694350065626146681::1383206982::1691852616::1::::<><>::
+::res://Nodes/Hero/::1692388439
+Hero.gd::GDScript::-1::1692313548::0::1::::<>CharacterBody2D<>::
+Hero.tscn::PackedScene::5616144987844389188::1692388439::0::1::::<><>::uid://cm6rlnpbhqtov
+::res://Nodes/Main/::1692631266
+Main.gd::GDScript::-1::1692631245::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::5389908367785479546::1692631266::0::1::::<><>::uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>res://Nodes/Main/Main.gd<>uid://di4ecwt2xabcv::::res://full tilemap.png<>uid://dib6nq1jlc1hh::::res://full spritesheet.png
+::res://Nodes/Main Menu/::1692388536
+Main_Menu.gd::GDScript::-1::1692388524::0::1::::<>Control<>::
+Main_Menu.tscn::PackedScene::615376758997669571::1692388536::0::1::::<><>::res://Nodes/Main Menu/Main_Menu.gd<>uid://j5l3x25b3syr
+::res://Nodes/Options Menu/::1692388439
+Back_Button.gd::GDScript::-1::1692388437::0::1::::<>Button<>::
+Options_Menu.tscn::PackedScene::5010588316388285446::1692388439::0::1::::<><>::uid://j5l3x25b3syr
 ::res://Sounds/::1689052247
 EnemyDie.wav::AudioStreamWAV::1506517690467706003::1577963136::1689052247::1::::<><>::
 Evade.wav::AudioStreamWAV::7205658021539269654::1577963136::1689052247::1::::<><>::

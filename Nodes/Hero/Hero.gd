@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed : int = 80
-@export var friction : int = 500
-@export var acceleration : int = 500
+@export var speed : int = 200
+@export var friction : int = 700
+@export var acceleration : int = 800
 
 enum {
 	MOVE,
