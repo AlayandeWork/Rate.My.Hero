@@ -47,7 +47,6 @@ func move_state(delta):
 	if Input.is_action_pressed("Attack"):
 		state = ATTACK
 		
-		
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
