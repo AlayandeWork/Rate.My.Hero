@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712355477
-default_env.tres::Environment::5132921972961010410::1712102762::0::1::::<><>::
+::res://::1712516191
+default_env.tres::Environment::5132921972961010410::1712356033::0::1::::<><>::
 full spritesheet.png::CompressedTexture2D::7724743500996390589::1712093583::1712093583::1::::<><>::
 full tilemap.png::CompressedTexture2D::7780887380732651885::1712093583::1712093583::1::::<><>::
 README.md::TextFile::-1::1712093583::0::1::::<><>::
@@ -70,12 +70,12 @@ Bow.png::CompressedTexture2D::5297250707414615049::1712093583::1712093583::1::::
 Player.png::CompressedTexture2D::5680155740059486733::1712093583::1712093583::1::::<><>::
 ::res://Nodes/::1712093583
 Pixel_NES.otf::FontFile::694350065626146681::1712093583::1712093583::1::::<><>::
-::res://Nodes/Hero/::1712093583
-Hero.gd::GDScript::-1::1712093583::0::1::::<>CharacterBody2D<>::
+::res://Nodes/Hero/::1712356033
+Hero.gd::GDScript::-1::1712356033::0::1::::<>CharacterBody2D<>::
 Hero.tscn::PackedScene::5616144987844389188::1712093583::0::1::::<><>::uid://cm6rlnpbhqtov::::res://Hero/Player.png<>res://Nodes/Hero/Hero.gd
-::res://Nodes/Main/::1712102762
+::res://Nodes/Main/::1712356033
 Main.gd::GDScript::-1::1712093583::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::5389908367785479546::1712102762::0::1::::<><>::uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>res://Nodes/Main/Main.gd<>uid://di4ecwt2xabcv::::res://full tilemap.png<>uid://dib6nq1jlc1hh::::res://full spritesheet.png
+Main.tscn::PackedScene::5389908367785479546::1712356033::0::1::::<><>::uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>res://Nodes/Main/Main.gd<>uid://di4ecwt2xabcv::::res://full tilemap.png<>uid://dib6nq1jlc1hh::::res://full spritesheet.png
 ::res://Nodes/Main Menu/::1712093583
 Main_Menu.gd::GDScript::-1::1712093583::0::1::::<>Control<>::
 Main_Menu.tscn::PackedScene::615376758997669571::1712093583::0::1::::<><>::res://Nodes/Main Menu/Main_Menu.gd<>uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf

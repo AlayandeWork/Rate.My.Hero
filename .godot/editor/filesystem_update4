@@ -1,3 +1,6 @@
 res://default_env.tres
 res://Nodes/Main/Main.tscn
+res://Enemies/Spikes/Spiketrap.tscn
+res://Enemies/Spikes/Spiketrap.gd
+res://Nodes/Hero/Hero.tscn
 res://Nodes/Hero/Hero.gd
