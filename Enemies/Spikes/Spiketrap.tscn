@@ -83,5 +83,3 @@ hframes = 10
 libraries = {
 "": SubResource("AnimationLibrary_kdd56")
 }
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

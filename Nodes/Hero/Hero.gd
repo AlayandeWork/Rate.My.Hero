@@ -53,8 +53,3 @@ func attack_state(_delta):
 	
 func attack_animation_finished():
 	state = MOVE
-	
-
-
-func _on_hazard_detector_area_entered(area):
-	queue_free()
