@@ -2,3 +2,4 @@ res://default_env.tres
 res://Nodes/Main/Main.tscn
 res://Nodes/Hero/Hero.tscn
 res://Nodes/Main/LevelTileMap.tscn
+res://Nodes/Hero/Hero.gd
