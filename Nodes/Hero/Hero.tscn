@@ -882,3 +882,5 @@ parameters/Run/blend_position = Vector2(0, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 3.5)
 shape = SubResource("18")
+
+[node name="Camera2D" type="Camera2D" parent="."]

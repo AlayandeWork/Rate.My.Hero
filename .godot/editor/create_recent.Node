@@ -1,3 +1,4 @@
+Camera2D
 CollisionShape2D
 Area2D
 AnimationPlayer
@@ -9,4 +10,3 @@ Control
 TextEdit
 VBoxContainer
 RemoteTransform2D
-Camera2D
