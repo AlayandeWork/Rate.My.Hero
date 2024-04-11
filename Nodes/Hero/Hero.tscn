@@ -838,8 +838,8 @@ transitions = ["Idle", "Run", SubResource("29"), "Run", "Idle", SubResource("30"
 graph_offset = Vector2(0, 185.851)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pa7el"]
-radius = 4.0
-height = 14.0
+radius = 7.0
+height = 22.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_layer = 2
