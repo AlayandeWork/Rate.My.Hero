@@ -8,3 +8,4 @@ script = ExtResource("1_20rjr")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4hur4")]
 position = Vector2(160, 96)
+speed = 100
