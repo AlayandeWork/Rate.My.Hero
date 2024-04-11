@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ci16ad4l8ldv3"]
+[gd_scene load_steps=4 format=3 uid="uid://ci16ad4l8ldv3"]
 
 [ext_resource type="Script" path="res://Nodes/Main/Main.gd" id="1_20rjr"]
 [ext_resource type="PackedScene" uid="uid://cmarc8b8qvuwa" path="res://Nodes/Hero/Hero.tscn" id="2_4hur4"]
+[ext_resource type="PackedScene" uid="uid://cp8t45lxaw11f" path="res://Nodes/Main/LevelTileMap.tscn" id="2_86i67"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_20rjr")
 
+[node name="TileMap" parent="." instance=ExtResource("2_86i67")]
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4hur4")]
-position = Vector2(160, 96)
-speed = 100
+z_index = 1
+position = Vector2(104, 56)
