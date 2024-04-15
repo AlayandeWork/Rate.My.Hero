@@ -1,2 +1,2 @@
 # Rate-My-Hero
-This project entails creating a straightforward 2D game to enhance my skills using the GODOT engine. The game will involve basic character movement, collisions, and interactions. Additionally, it will include sprites for the character and the surrounding area that the character will explore.
+This project is about creating a straightforward and short top-down 2D game with the Godot Game Engine. The game will include fundamental elements such as moving the character, managing collisions, and enabling interactions.
