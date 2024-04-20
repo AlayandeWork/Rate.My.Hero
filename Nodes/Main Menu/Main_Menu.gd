@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	$VBoxContainer/StartButton.grab_focus()
+// VBox Container function 
 
 
 func _on_start_button_pressed():
