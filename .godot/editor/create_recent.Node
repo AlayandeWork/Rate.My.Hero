@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+Timer
 TextureRect
 VBoxContainer
 Button
@@ -10,5 +12,3 @@ AnimatedSprite2D
 Sprite2D
 Label
 Control
-TextEdit
-RemoteTransform2D

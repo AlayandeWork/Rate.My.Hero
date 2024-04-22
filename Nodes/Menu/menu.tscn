@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkhqsx3geki5w"]
+[gd_scene load_steps=14 format=3 uid="uid://bkhqsx3geki5w"]
 
 [ext_resource type="Script" path="res://Nodes/Menu/menu.gd" id="1_j8f8h"]
 [ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Nodes/Pixel_NES.otf" id="1_xx4c2"]
 [ext_resource type="Texture2D" uid="uid://b24ci0hlteu30" path="res://Nodes/Menu/main_menu_picture.jpg" id="2_rrwe5"]
+[ext_resource type="AudioStream" uid="uid://r18qfgkd77lh" path="res://Sounds/Menu Move.wav" id="4_dksho"]
+[ext_resource type="AudioStream" uid="uid://dlx1crjrgsq74" path="res://Sounds/Menu Select.wav" id="5_t71n8"]
+[ext_resource type="AudioStream" uid="uid://dr6kf5wtjgx8w" path="res://Sounds/Background_Song.wav" id="6_ws4ne"]
 
 [sub_resource type="Theme" id="Theme_h4u62"]
 
@@ -37,6 +40,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rrwe5")
 expand_mode = 2
+
+[node name="SceneTimer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -91,6 +98,21 @@ text = "Exit"
 flat = true
 alignment = 0
 
+[node name="MovingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dksho")
+
+[node name="SelectingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_t71n8")
+
+[node name="BackgroundMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ws4ne")
+autoplay = true
+
+[connection signal="focus_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/OptionsMenu" to="." method="_on_options_menu_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/OptionsMenu" to="." method="_on_options_menu_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="finished" from="BackgroundMenu" to="." method="_on_background_menu_finished"]
+[connection signal="tree_exited" from="BackgroundMenu" to="." method="_on_background_menu_tree_exited"]
