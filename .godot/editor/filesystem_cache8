@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713727869
-default_env.tres::Environment::5132921972961010410::1712801922::0::1::::<><>::
+::res://::1713744922
+default_env.tres::Environment::5132921972961010410::1713744410::0::1::::<><>::
 full spritesheet.png::CompressedTexture2D::7724743500996390589::1712093583::1712093583::1::::<><>::
 full tilemap.png::CompressedTexture2D::7780887380732651885::1712093583::1712093583::1::::<><>::
 README.md::TextFile::-1::1713724649::0::1::::<><>::
@@ -68,21 +68,18 @@ slime_run_spritesheeet.png::CompressedTexture2D::4228507638211106396::1712093583
 Arrow.png::CompressedTexture2D::8807157432978186914::1712093583::1712093583::1::::<><>::
 Bow.png::CompressedTexture2D::5297250707414615049::1712093583::1712093583::1::::<><>::
 Player.png::CompressedTexture2D::5680155740059486733::1712093583::1712093583::1::::<><>::
-::res://Nodes/::1712093583
+::res://Nodes/::1713741344
 Pixel_NES.otf::FontFile::694350065626146681::1712093583::1712093583::1::::<><>::
-::res://Nodes/Hero/::1713724649
+::res://Nodes/Hero/::1713733382
 Hero.gd::GDScript::-1::1713724649::0::1::::<>CharacterBody2D<>::
-Hero.tscn::PackedScene::5616144987844389188::1712801839::0::1::::<><>::uid://cm6rlnpbhqtov::::res://Hero/Player.png<>res://Nodes/Hero/Hero.gd
-::res://Nodes/Main/::1712801922
-LevelTileMap.tscn::PackedScene::5895005492465728561::1712801922::0::1::::<><>::uid://di4ecwt2xabcv::::res://full tilemap.png
+Hero.tscn::PackedScene::5616144987844389188::1713733382::0::1::::<><>::uid://cm6rlnpbhqtov::::res://Hero/Player.png<>res://Nodes/Hero/Hero.gd
+::res://Nodes/Main/::1713733395
+LevelTileMap.tscn::PackedScene::5895005492465728561::1713733395::0::1::::<><>::uid://di4ecwt2xabcv::::res://full tilemap.png
 Main.gd::GDScript::-1::1712688075::0::1::::<>Node2D<>::
-Main.tscn::PackedScene::5389908367785479546::1712801820::0::1::::<><>::res://Nodes/Main/Main.gd<>uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>uid://cp8t45lxaw11f::::res://Nodes/Main/LevelTileMap.tscn
-::res://Nodes/Main Menu/::1713724649
-Main_Menu.gd::GDScript::-1::1713724649::0::1::::<>Control<>::
-Main_Menu.tscn::PackedScene::615376758997669571::1712093583::0::1::::<><>::res://Nodes/Main Menu/Main_Menu.gd<>uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf
-::res://Nodes/Options Menu/::1712093583
-Back_Button.gd::GDScript::-1::1712093583::0::1::::<>Button<>::
-Options_Menu.tscn::PackedScene::5010588316388285446::1712093583::0::1::::<><>::uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf<>res://Nodes/Options Menu/Back_Button.gd
+Main.tscn::PackedScene::5389908367785479546::1713733381::0::1::::<><>::res://Nodes/Main/Main.gd<>uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>uid://cp8t45lxaw11f::::res://Nodes/Main/LevelTileMap.tscn
+::res://Nodes/Menu/::1713744922
+main_menu_picture.jpg::CompressedTexture2D::4341523461547226897::1713744902::1713744923::1::::<><>::
+menu.tscn::PackedScene::3103764632096333058::1713744410::0::1::::<><>::uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf
 ::res://Sounds/::1712093583
 EnemyDie.wav::AudioStreamWAV::1506517690467706003::1712093583::1712093583::1::::<><>::
 Evade.wav::AudioStreamWAV::7205658021539269654::1712093583::1712093583::1::::<><>::

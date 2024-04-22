@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://bkhqsx3geki5w"]
+[gd_scene load_steps=10 format=3 uid="uid://bkhqsx3geki5w"]
+
+[ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Nodes/Pixel_NES.otf" id="1_xx4c2"]
+[ext_resource type="Texture2D" uid="uid://b24ci0hlteu30" path="res://Nodes/Menu/main_menu_picture.jpg" id="2_rrwe5"]
+
+[sub_resource type="Theme" id="Theme_h4u62"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilmx8"]
+bg_color = Color(0.588235, 0.552941, 0.866667, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8x04"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7xrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_305if"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jn5fw"]
+bg_color = Color(0.588235, 0.537255, 0.92549, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asga0"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -8,27 +27,56 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rrwe5")
+expand_mode = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -33.0
+offset_top = -46.0
 offset_right = 40.0
-offset_bottom = -1.0
 grow_vertical = 0
+theme_override_constants/separation = -1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = SubResource("Theme_h4u62")
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
 theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ilmx8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c8x04")
 text = "Start"
+flat = true
+alignment = 0
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
 theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j7xrj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_305if")
 text = "Options"
+flat = true
+alignment = 0
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
 theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jn5fw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_asga0")
 text = "Exit"
+flat = true
+alignment = 0

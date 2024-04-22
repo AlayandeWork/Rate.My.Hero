@@ -1,5 +1,6 @@
-Button
+TextureRect
 VBoxContainer
+Button
 TileMap
 Camera2D
 CollisionShape2D
