@@ -5,3 +5,4 @@ res://Nodes/Hero/Hero.tscn
 res://Nodes/Main/LevelTileMap.tscn
 res://Nodes/Main Menu/Main_Menu.tscn
 res://Nodes/Menu/menu.tscn
+res://Nodes/Menu/menu.gd
