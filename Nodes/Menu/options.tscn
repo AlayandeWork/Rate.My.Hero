@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0uawypvjvdm3"]
+[gd_scene load_steps=4 format=3 uid="uid://c0uawypvjvdm3"]
 
 [ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Nodes/Pixel_NES.otf" id="1_motet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojosn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1j1rf"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -20,9 +24,15 @@ offset_bottom = 24.0
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ojosn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1j1rf")
 text = "Back"
+flat = true
 
 [node name="optionslabel" type="Label" parent="."]
 layout_mode = 0
