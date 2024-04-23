@@ -68,8 +68,8 @@ text = "Attack
 layout_mode = 0
 offset_left = 191.0
 offset_top = 34.0
-offset_right = 268.0
-offset_bottom = 165.0
+offset_right = 233.0
+offset_bottom = 115.0
 
 [node name="forward" type="Label" parent="VBoxContainer3"]
 layout_mode = 2
