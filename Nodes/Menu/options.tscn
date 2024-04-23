@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0uawypvjvdm3"]
+[gd_scene load_steps=6 format=3 uid="uid://c0uawypvjvdm3"]
 
+[ext_resource type="Script" path="res://Nodes/Menu/options.gd" id="1_an7ds"]
 [ext_resource type="Texture2D" uid="uid://b24ci0hlteu30" path="res://Nodes/Menu/main_menu_picture.jpg" id="1_i6vs7"]
 [ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Nodes/Pixel_NES.otf" id="1_motet"]
 
@@ -15,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_an7ds")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -141,3 +143,5 @@ offset_bottom = 48.0
 [node name="Label" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "----------"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

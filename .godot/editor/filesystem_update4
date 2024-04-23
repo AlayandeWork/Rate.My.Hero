@@ -1,3 +1,5 @@
 res://default_env.tres
 res://Nodes/Menu/options.tscn
 res://Nodes/Menu/menu.tscn
+res://Nodes/Menu/menu.gd
+res://Nodes/Menu/options.gd
