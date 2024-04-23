@@ -109,3 +109,14 @@ theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "SPACE
 "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 8.0
+offset_right = 189.0
+offset_bottom = 48.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "----------"

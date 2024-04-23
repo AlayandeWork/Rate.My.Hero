@@ -1,5 +1,6 @@
-VBoxContainer
 Label
+HBoxContainer
+VBoxContainer
 TextEdit
 Button
 AudioStreamPlayer2D
@@ -11,4 +12,3 @@ CollisionShape2D
 Area2D
 AnimationPlayer
 AnimatedSprite2D
-Sprite2D
