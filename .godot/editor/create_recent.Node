@@ -1,5 +1,5 @@
-Label
 VBoxContainer
+Label
 TextEdit
 Button
 AudioStreamPlayer2D
