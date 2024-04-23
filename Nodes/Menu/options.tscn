@@ -36,7 +36,7 @@ layout_mode = 0
 offset_left = 77.0
 offset_top = 34.0
 offset_right = 154.0
-offset_bottom = 165.0
+offset_bottom = 115.0
 
 [node name="forward" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
