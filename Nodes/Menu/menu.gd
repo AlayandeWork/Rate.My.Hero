@@ -1,7 +1,5 @@
 extends Control
 
-@onready var scene_timer: Timer = $SceneTimer
-
 func _ready():
 	$VBoxContainer/StartButton.grab_focus()
 	

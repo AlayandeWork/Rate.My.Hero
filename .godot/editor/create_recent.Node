@@ -1,10 +1,10 @@
+AudioStreamPlayer2D
 TextureRect
 Label
 HBoxContainer
 VBoxContainer
 TextEdit
 Button
-AudioStreamPlayer2D
 Timer
 TileMap
 Camera2D
