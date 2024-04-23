@@ -8,8 +8,8 @@ func _ready():
 	
 # PRESSED AREA
 func _on_start_button_pressed():
-	$SelectingMenu.play()
 	get_tree().change_scene_to_file("res://Nodes/Main/Main.tscn")
+	$SelectingMenu.play()
 
 func _on_options_menu_pressed():
 	$SelectingMenu.play()
@@ -36,3 +36,15 @@ func _on_exit_button_focus_entered():
 
 func _on_background_menu_finished():
 	$BackgroundMenu.play()
+
+
+func _on_start_button_mouse_entered():
+	$MovingMenu.play()
+
+
+func _on_options_menu_mouse_entered():
+	$MovingMenu.play()
+
+
+func _on_exit_button_mouse_entered():
+	$MovingMenu.play()
