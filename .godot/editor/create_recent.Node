@@ -1,8 +1,10 @@
+Label
+VBoxContainer
+TextEdit
+Button
 AudioStreamPlayer2D
 Timer
 TextureRect
-VBoxContainer
-Button
 TileMap
 Camera2D
 CollisionShape2D
@@ -10,5 +12,3 @@ Area2D
 AnimationPlayer
 AnimatedSprite2D
 Sprite2D
-Label
-Control
