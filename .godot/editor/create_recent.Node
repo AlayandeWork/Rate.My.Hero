@@ -1,3 +1,4 @@
+TextureRect
 Label
 HBoxContainer
 VBoxContainer
@@ -5,7 +6,6 @@ TextEdit
 Button
 AudioStreamPlayer2D
 Timer
-TextureRect
 TileMap
 Camera2D
 CollisionShape2D
