@@ -1,5 +1,8 @@
 res://default_env.tres
-res://Nodes/Menu/options.tscn
 res://Nodes/Menu/menu.tscn
-res://Nodes/Menu/menu.gd
+res://Nodes/Menu/options.tscn
 res://Nodes/Menu/options.gd
+res://Nodes/Menu/menu.gd
+res://Nodes/audio_manager/audio_player.tscn
+res://Nodes/audio_manager/audio_player.gd
+res://Nodes/Main/Main.gd

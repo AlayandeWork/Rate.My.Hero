@@ -7,8 +7,14 @@ func _ready():
 
 
 func _on_back_button_pressed():
+	$SelectingMenu.play()
 	get_tree().change_scene_to_file("res://Nodes/Menu/menu.tscn")
 
 
-func _on_background_finished():
-	$background.play()
+
+func _on_back_button_mouse_entered():
+	$MovingMenu.play() # Replace with function body.
+
+
+func _on_back_button_focus_entered():
+	$MovingMenu.play()

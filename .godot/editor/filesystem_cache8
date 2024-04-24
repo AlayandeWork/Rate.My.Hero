@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713895386
-default_env.tres::Environment::5132921972961010410::1713827105::0::1::::<><>::
+::res://::1713987525
+default_env.tres::Environment::5132921972961010410::1713987525::0::1::::<><>::
 full spritesheet.png::CompressedTexture2D::7724743500996390589::1712093583::1712093583::1::::<><>::
 full tilemap.png::CompressedTexture2D::7780887380732651885::1712093583::1712093583::1::::<><>::
 README.md::TextFile::-1::1713724649::0::1::::<><>::
@@ -68,22 +68,27 @@ slime_run_spritesheeet.png::CompressedTexture2D::4228507638211106396::1712093583
 Arrow.png::CompressedTexture2D::8807157432978186914::1712093583::1712093583::1::::<><>::
 Bow.png::CompressedTexture2D::5297250707414615049::1712093583::1712093583::1::::<><>::
 Player.png::CompressedTexture2D::5680155740059486733::1712093583::1712093583::1::::<><>::
-::res://Nodes/::1713741344
+::res://Nodes/::1713984666
 Pixel_NES.otf::FontFile::694350065626146681::1712093583::1712093583::1::::<><>::
+::res://Nodes/audio_manager/::1713987525
+audio_player.tscn::PackedScene::503287140941159770::1713987525::0::1::::<><>::res://Nodes/audio_manager/audio_player.gd
+audio_player.gd::GDScript::-1::1713987512::0::1::::<>AudioStreamPlayer<>::
 ::res://Nodes/Hero/::1713733382
 Hero.gd::GDScript::-1::1713724649::0::1::::<>CharacterBody2D<>::
 Hero.tscn::PackedScene::5616144987844389188::1713733382::0::1::::<><>::uid://cm6rlnpbhqtov::::res://Hero/Player.png<>res://Nodes/Hero/Hero.gd
-::res://Nodes/Main/::1713733395
+::res://Nodes/Main/::1713985379
 LevelTileMap.tscn::PackedScene::5895005492465728561::1713733395::0::1::::<><>::uid://di4ecwt2xabcv::::res://full tilemap.png
-Main.gd::GDScript::-1::1712688075::0::1::::<>Node2D<>::
+Main.gd::GDScript::-1::1713985379::0::1::::<>Node2D<>::
 Main.tscn::PackedScene::5389908367785479546::1713733381::0::1::::<><>::res://Nodes/Main/Main.gd<>uid://cmarc8b8qvuwa::::res://Nodes/Hero/Hero.tscn<>uid://cp8t45lxaw11f::::res://Nodes/Main/LevelTileMap.tscn
-::res://Nodes/Menu/::1713827105
+::res://Nodes/Menu/::1713987525
 main_menu_picture.jpg::CompressedTexture2D::4341523461547226897::1713744902::1713744923::1::::<><>::
-menu.gd::GDScript::-1::1713751948::0::1::::<>Control<>::
-menu.tscn::PackedScene::3103764632096333058::1713827105::0::1::::<><>::res://Nodes/Menu/menu.gd<>uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf<>uid://b24ci0hlteu30::::res://Nodes/Menu/main_menu_picture.jpg<>uid://r18qfgkd77lh::::res://Sounds/Menu Move.wav<>uid://dlx1crjrgsq74::::res://Sounds/Menu Select.wav<>uid://dr6kf5wtjgx8w::::res://Sounds/Background_Song.wav
-::res://Sounds/::1713750603
-Background_Song.wav::AudioStreamWAV::8417085812760660980::1713750560::1713750603::1::::<><>::
-EnemyDie.wav::AudioStreamWAV::1506517690467706003::1712093583::1712093583::1::::<><>::
+menu.gd::GDScript::-1::1713986589::0::1::::<>Control<>::
+menu.tscn::PackedScene::3103764632096333058::1713987525::0::1::::<><>::res://Nodes/Menu/menu.gd<>uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf<>uid://b24ci0hlteu30::::res://Nodes/Menu/main_menu_picture.jpg<>uid://r18qfgkd77lh::::res://Sounds/Menu Move.wav<>uid://dlx1crjrgsq74::::res://Sounds/Menu Select.wav
+options.gd::GDScript::-1::1713986048::0::1::::<>Control<>::
+options.tscn::PackedScene::6568890585583584856::1713987525::0::1::::<><>::res://Nodes/Menu/options.gd<>uid://b24ci0hlteu30::::res://Nodes/Menu/main_menu_picture.jpg<>uid://j5l3x25b3syr::::res://Nodes/Pixel_NES.otf<>uid://dlx1crjrgsq74::::res://Sounds/Menu Select.wav<>uid://r18qfgkd77lh::::res://Sounds/Menu Move.wav
+::res://Sounds/::1713987524
+Background_Song.wav::AudioStreamWAV::8417085812760660980::1713750560::1713987456::1::::<><>::
+EnemyDie.wav::AudioStreamWAV::1506517690467706003::1712093583::1713987536::1::::<><>::
 Evade.wav::AudioStreamWAV::7205658021539269654::1712093583::1712093583::1::::<><>::
 Hit.wav::AudioStreamWAV::6299459125923032282::1712093583::1712093583::1::::<><>::
 Hurt.wav::AudioStreamWAV::1037344818380846682::1712093583::1712093583::1::::<><>::

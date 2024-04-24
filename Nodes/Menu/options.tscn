@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0uawypvjvdm3"]
+[gd_scene load_steps=8 format=3 uid="uid://c0uawypvjvdm3"]
 
 [ext_resource type="Script" path="res://Nodes/Menu/options.gd" id="1_an7ds"]
 [ext_resource type="Texture2D" uid="uid://b24ci0hlteu30" path="res://Nodes/Menu/main_menu_picture.jpg" id="1_i6vs7"]
 [ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Nodes/Pixel_NES.otf" id="1_motet"]
-[ext_resource type="AudioStream" uid="uid://dr6kf5wtjgx8w" path="res://Sounds/Background_Song.wav" id="4_r0tng"]
+[ext_resource type="AudioStream" uid="uid://dlx1crjrgsq74" path="res://Sounds/Menu Select.wav" id="4_ylk2x"]
+[ext_resource type="AudioStream" uid="uid://r18qfgkd77lh" path="res://Sounds/Menu Move.wav" id="5_0bivr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojosn"]
 
@@ -21,11 +22,11 @@ script = ExtResource("1_an7ds")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 6.0
-anchor_bottom = 6.0
-offset_right = -1599.0
-offset_bottom = -899.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_i6vs7")
 expand_mode = 2
 
@@ -145,9 +146,12 @@ offset_bottom = 48.0
 layout_mode = 2
 text = "----------"
 
-[node name="background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_r0tng")
-autoplay = true
+[node name="SelectingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ylk2x")
 
+[node name="MovingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0bivr")
+
+[connection signal="focus_entered" from="VBoxContainer/BackButton" to="." method="_on_back_button_focus_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/BackButton" to="." method="_on_back_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="finished" from="background" to="." method="_on_background_finished"]

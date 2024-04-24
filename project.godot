@@ -14,6 +14,10 @@ config/name="Rate My Hero"
 run/main_scene="res://Nodes/Menu/menu.tscn"
 config/features=PackedStringArray("4.2")
 
+[autoload]
+
+AudioPlayer="*res://Nodes/audio_manager/audio_player.tscn"
+
 [display]
 
 window/size/viewport_width=320

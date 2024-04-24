@@ -1,10 +1,11 @@
 extends Control
 
 func _ready():
-	$VBoxContainer/StartButton.grab_focus()
+	AudioPlayer._play_background_music()
+	#$VBoxContainer/StartButton.grab_focus()
 	
 	
-# PRESSED AREA
+# pressed AREA
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://Nodes/Main/Main.tscn")
 	$SelectingMenu.play()
@@ -19,7 +20,7 @@ func _on_exit_button_pressed():
 	$SelectingMenu.play()
 	
 	
-# HOVER AREA
+# focus AREA
 func _on_start_button_focus_entered():
 	$MovingMenu.play()
 	# Replace with function body.
@@ -32,11 +33,7 @@ func _on_exit_button_focus_entered():
 	$MovingMenu.play()
 	# Replace with function body.
 
-
-func _on_background_menu_finished():
-	$BackgroundMenu.play()
-
-
+# Entered
 func _on_start_button_mouse_entered():
 	$MovingMenu.play()
 
@@ -47,3 +44,4 @@ func _on_options_menu_mouse_entered():
 
 func _on_exit_button_mouse_entered():
 	$MovingMenu.play()
+
