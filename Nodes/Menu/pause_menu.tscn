@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dapl3d2ypx668"]
+[gd_scene load_steps=4 format=3 uid="uid://dapl3d2ypx668"]
 
 [ext_resource type="Script" path="res://Nodes/Menu/pause_menu.gd" id="1_qo74d"]
+[ext_resource type="Shader" path="res://Nodes/Menu/pause_menu.gdshader" id="2_w7qpo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nu7d8"]
+shader = ExtResource("2_w7qpo")
+shader_parameter/lod = 0.0
 
 [node name="Pause_Menu" type="Control"]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +16,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qo74d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_nu7d8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

@@ -6,3 +6,4 @@ res://Nodes/Menu/menu.tscn
 res://Nodes/Menu/options.tscn
 res://Nodes/audio_manager/audio_player.tscn
 res://Nodes/Menu/pause_menu.gd
+res://Nodes/Menu/pause_menu.gdshader
