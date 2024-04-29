@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci16ad4l8ldv3"]
+[gd_scene load_steps=5 format=3 uid="uid://ci16ad4l8ldv3"]
 
 [ext_resource type="Script" path="res://Nodes/Main/Main.gd" id="1_20rjr"]
 [ext_resource type="PackedScene" uid="uid://cmarc8b8qvuwa" path="res://Nodes/Hero/Hero.tscn" id="2_4hur4"]
 [ext_resource type="PackedScene" uid="uid://cp8t45lxaw11f" path="res://Nodes/Main/LevelTileMap.tscn" id="2_86i67"]
+[ext_resource type="PackedScene" uid="uid://dapl3d2ypx668" path="res://Nodes/Menu/pause_menu.tscn" id="4_123e1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_20rjr")
@@ -12,3 +13,11 @@ script = ExtResource("1_20rjr")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4hur4")]
 z_index = 4
 position = Vector2(104, 56)
+
+[node name="Pause_Menu" parent="." instance=ExtResource("4_123e1")]
+offset_left = 155.0
+offset_top = 85.0
+offset_right = 155.0
+offset_bottom = 85.0
+size_flags_horizontal = 4
+size_flags_vertical = 4

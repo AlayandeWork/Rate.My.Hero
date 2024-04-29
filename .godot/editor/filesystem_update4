@@ -1,2 +1,4 @@
 res://default_env.tres
 res://Nodes/Menu/pause_menu.tscn
+res://Nodes/Main/Main.tscn
+res://Nodes/Main/Main.gd
