@@ -20,7 +20,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_an7ds")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
