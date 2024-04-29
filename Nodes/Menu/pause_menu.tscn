@@ -5,10 +5,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nu7d8"]
 shader = ExtResource("2_w7qpo")
-shader_parameter/lod = 0.0
+shader_parameter/lod = 3.0
 
 [node name="Pause_Menu" type="Control"]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
