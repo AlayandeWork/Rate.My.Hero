@@ -14,10 +14,6 @@ script = ExtResource("1_20rjr")
 z_index = 4
 position = Vector2(104, 56)
 
-[node name="Pause_Menu" parent="." instance=ExtResource("4_123e1")]
-offset_left = 155.0
-offset_top = 85.0
-offset_right = 155.0
-offset_bottom = 85.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("4_123e1")]

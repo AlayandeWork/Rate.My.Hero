@@ -1,12 +1,17 @@
-[gd_scene format=3 uid="uid://dapl3d2ypx668"]
+[gd_scene load_steps=2 format=3 uid="uid://dapl3d2ypx668"]
+
+[ext_resource type="Script" path="res://Nodes/Menu/pause_menu.gd" id="1_qo74d"]
 
 [node name="Pause_Menu" type="Control"]
+process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qo74d")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -32,3 +37,6 @@ text = "Resume"
 [node name="QuitButton" type="Button" parent="MarginContainer/PauseMenuButtons"]
 layout_mode = 2
 text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/PauseMenuButtons/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PauseMenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
