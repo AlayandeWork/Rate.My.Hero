@@ -1,10 +1,10 @@
+VBoxContainer
 AudioStreamPlayer
 Node2D
 AudioStreamPlayer2D
 TextureRect
 Label
 HBoxContainer
-VBoxContainer
 TextEdit
 Button
 Timer

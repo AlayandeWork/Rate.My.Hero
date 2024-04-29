@@ -30,14 +30,14 @@ grow_vertical = 2
 texture = ExtResource("1_i6vs7")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="BackbuttonContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 48.0
 offset_bottom = 24.0
 
-[node name="BackButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="BackbuttonContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
@@ -49,100 +49,97 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_1j1rf")
 text = "Back"
 flat = true
 
-[node name="optionslabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 136.0
-offset_top = 16.0
-offset_right = 189.0
-offset_bottom = 30.0
-theme_override_fonts/font = ExtResource("1_motet")
-theme_override_font_sizes/font_size = 10
-text = "OPTIONS"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="LeftContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 40.0
 offset_right = 264.0
 offset_bottom = 111.0
 
-[node name="forward" type="Label" parent="VBoxContainer2"]
+[node name="forward" type="Label" parent="LeftContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "Forward                 "
 
-[node name="backward" type="Label" parent="VBoxContainer2"]
+[node name="backward" type="Label" parent="LeftContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "Backward"
 
-[node name="left" type="Label" parent="VBoxContainer2"]
+[node name="left" type="Label" parent="LeftContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "Left"
 
-[node name="right" type="Label" parent="VBoxContainer2"]
+[node name="right" type="Label" parent="LeftContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "Right"
 
-[node name="attack" type="Label" parent="VBoxContainer2"]
+[node name="attack" type="Label" parent="LeftContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "Attack
 "
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+[node name="RightContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 40.0
 offset_right = 315.0
 offset_bottom = 121.0
 
-[node name="w" type="Label" parent="VBoxContainer3"]
+[node name="w" type="Label" parent="RightContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "W              "
 
-[node name="s" type="Label" parent="VBoxContainer3"]
+[node name="s" type="Label" parent="RightContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "S"
 
-[node name="a" type="Label" parent="VBoxContainer3"]
+[node name="a" type="Label" parent="RightContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "A"
 
-[node name="d" type="Label" parent="VBoxContainer3"]
+[node name="d" type="Label" parent="RightContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "D"
 
-[node name="space" type="Label" parent="VBoxContainer3"]
+[node name="space" type="Label" parent="RightContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_motet")
 theme_override_font_sizes/font_size = 9
 text = "SPACE
 "
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="DottedLinesContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 137.0
 offset_top = 8.0
-offset_right = 189.0
-offset_bottom = 48.0
+offset_right = 190.0
+offset_bottom = 33.0
+theme_override_constants/separation = -10
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="Options" type="Label" parent="DottedLinesContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_motet")
+theme_override_font_sizes/font_size = 10
+text = "OPTIONS"
+
+[node name="DottedLines" type="Label" parent="DottedLinesContainer"]
 layout_mode = 2
 text = "----------"
 
@@ -152,6 +149,6 @@ stream = ExtResource("4_ylk2x")
 [node name="MovingMenu" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_0bivr")
 
-[connection signal="focus_entered" from="VBoxContainer/BackButton" to="." method="_on_back_button_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/BackButton" to="." method="_on_back_button_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="focus_entered" from="BackbuttonContainer/BackButton" to="." method="_on_back_button_focus_entered"]
+[connection signal="mouse_entered" from="BackbuttonContainer/BackButton" to="." method="_on_back_button_mouse_entered"]
+[connection signal="pressed" from="BackbuttonContainer/BackButton" to="." method="_on_back_button_pressed"]
