@@ -57,7 +57,7 @@ theme_override_constants/separation = -1
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../ExitButton")
-focus_neighbor_bottom = NodePath("../OptionsMenu")
+focus_neighbor_bottom = NodePath("../OptionsButton")
 theme = SubResource("Theme_h4u62")
 theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
 theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
@@ -69,7 +69,7 @@ text = "Start"
 flat = true
 alignment = 0
 
-[node name="OptionsMenu" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../StartButton")
 focus_neighbor_bottom = NodePath("../ExitButton")
@@ -85,7 +85,7 @@ alignment = 0
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../OptionsMenu")
+focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
 theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
@@ -106,9 +106,9 @@ stream = ExtResource("5_t71n8")
 [connection signal="focus_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_focus_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="focus_entered" from="VBoxContainer/OptionsMenu" to="." method="_on_options_menu_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/OptionsMenu" to="." method="_on_options_menu_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/OptionsMenu" to="." method="_on_options_menu_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_focus_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_pressed"]
 [connection signal="focus_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
