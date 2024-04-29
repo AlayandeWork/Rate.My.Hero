@@ -21,7 +21,7 @@ bg_color = Color(0.588235, 0.537255, 0.92549, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asga0"]
 
-[node name="Menu" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j8f8h")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +40,7 @@ grow_vertical = 2
 texture = ExtResource("2_rrwe5")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MenuButtonsContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -50,7 +50,7 @@ offset_right = 40.0
 grow_vertical = 0
 theme_override_constants/separation = -1
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="StartButton" type="Button" parent="MenuButtonsContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../ExitButton")
 focus_neighbor_bottom = NodePath("../OptionsButton")
@@ -65,7 +65,7 @@ text = "Start"
 flat = true
 alignment = 0
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="MenuButtonsContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../StartButton")
 focus_neighbor_bottom = NodePath("../ExitButton")
@@ -79,7 +79,7 @@ text = "Options"
 flat = true
 alignment = 0
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MenuButtonsContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../StartButton")
@@ -99,12 +99,12 @@ stream = ExtResource("4_dksho")
 [node name="SelectingMenu" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_t71n8")
 
-[connection signal="focus_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="focus_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_menu_pressed"]
-[connection signal="focus_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
-[connection signal="mouse_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="focus_entered" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_pressed"]
+[connection signal="focus_entered" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]
