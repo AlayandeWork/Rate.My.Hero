@@ -6,3 +6,4 @@ res://Nodes/audio_manager/audio_player.tscn
 res://Nodes/Menu/pause_menu.tscn
 res://Nodes/Main/Main.tscn
 res://Nodes/Hero/Hero.tscn
+res://Nodes/Hero/Hero.gd
