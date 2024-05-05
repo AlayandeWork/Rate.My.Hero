@@ -1,9 +1,4 @@
 res://default_env.tres
-res://Nodes/Menu/menu.tscn
-res://Nodes/Menu/pause_menu.gdshader
-res://Nodes/Menu/options.tscn
-res://Nodes/audio_manager/audio_player.tscn
-res://Nodes/Menu/pause_menu.tscn
-res://Nodes/Main/Main.tscn
 res://Nodes/Hero/Hero.tscn
+res://Nodes/Menu/pause_menu.gdshader
 res://Nodes/Hero/Hero.gd
