@@ -5,3 +5,5 @@ res://Nodes/Hero/Hero.gd
 res://Nodes/Menu/menu.tscn
 res://Nodes/Menu/options.tscn
 res://Nodes/Menu/pause_menu.tscn
+res://Nodes/Main/LevelTileMap.tscn
+res://Nodes/Main/Main.tscn
