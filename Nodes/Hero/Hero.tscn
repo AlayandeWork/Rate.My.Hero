@@ -857,6 +857,8 @@ height = 12.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 process_mode = 3
+z_index = 2
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("2")
 
@@ -883,6 +885,5 @@ parameters/Run/blend_position = Vector2(0, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 3.5)
 shape = SubResource("CapsuleShape2D_pa7el")
-disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

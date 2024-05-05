@@ -10,6 +10,8 @@ script = ExtResource("1_20rjr")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4hur4")]
 z_index = 2
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(104, 56)
 
 [node name="TileMap" parent="." instance=ExtResource("2_86i67")]
