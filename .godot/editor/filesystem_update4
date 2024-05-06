@@ -7,3 +7,4 @@ res://Nodes/Hero/Hero.tscn
 res://Nodes/Main/LevelTileMap.tscn
 res://Nodes/Main/Main.tscn
 res://Nodes/Enemies/enemy.tscn
+res://Nodes/Enemies/enemy.gd
