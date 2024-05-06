@@ -1,3 +1,5 @@
+AnimatedSprite2D
+CharacterBody2D
 ColorRect
 CanvasLayer
 MarginContainer
@@ -11,5 +13,3 @@ Label
 HBoxContainer
 TextEdit
 Timer
-TileMap
-Camera2D
