@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://2vdbwwtwwd4a"]
+[gd_scene load_steps=22 format=3 uid="uid://2vdbwwtwwd4a"]
 
 [ext_resource type="Texture2D" uid="uid://cmlqeeyvt5853" path="res://Effects/enemy_afterdead_explosion_anim_spritesheet.png" id="1_f4yoi"]
 [ext_resource type="Texture2D" uid="uid://78bcd0islu4d" path="res://Enemies/goblin/goblin_idle_spritesheet.png" id="2_1qfxv"]
@@ -134,6 +134,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ywj0"]
+radius = 41.0488
+
 [node name="Enemy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -141,3 +144,8 @@ sprite_frames = SubResource("SpriteFrames_qwbbn")
 animation = &"enemy_run"
 
 [node name="detection" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+shape = SubResource("CircleShape2D_1ywj0")
