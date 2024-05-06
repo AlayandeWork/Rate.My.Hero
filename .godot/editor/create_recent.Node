@@ -1,3 +1,4 @@
+Area2D
 AnimatedSprite2D
 CharacterBody2D
 ColorRect
@@ -12,4 +13,3 @@ TextureRect
 Label
 HBoxContainer
 TextEdit
-Timer

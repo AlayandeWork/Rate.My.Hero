@@ -138,4 +138,6 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qwbbn")
-animation = &"enemy_death"
+animation = &"enemy_run"
+
+[node name="detection" type="Area2D" parent="."]
