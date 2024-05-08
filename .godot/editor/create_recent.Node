@@ -1,7 +1,8 @@
 CollisionShape2D
 Area2D
-AnimatedSprite2D
+Sprite2D
 CharacterBody2D
+AnimatedSprite2D
 ColorRect
 CanvasLayer
 MarginContainer
@@ -11,4 +12,3 @@ AudioStreamPlayer
 Node2D
 AudioStreamPlayer2D
 TextureRect
-Label

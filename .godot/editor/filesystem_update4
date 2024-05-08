@@ -1,10 +1,7 @@
 res://default_env.tres
-res://Nodes/Enemies/enemy.tscn
 res://Nodes/Menu/pause_menu.gdshader
-res://Nodes/Menu/menu.tscn
-res://Nodes/Menu/options.tscn
-res://Nodes/Menu/pause_menu.tscn
+res://character_body_2d.gd
+res://character_body_2d.tscn
+res://Nodes/Main/Main.tscn
 res://Nodes/Hero/Hero.tscn
 res://Nodes/Main/LevelTileMap.tscn
-res://Nodes/Main/Main.tscn
-res://Nodes/Enemies/enemy.gd
