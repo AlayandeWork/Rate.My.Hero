@@ -70,9 +70,9 @@ position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_4n6vj")
 animation = &"idle"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="detectionArea2D" type="Area2D" parent="."]
 
-[node name="detectionCollision" type="CollisionShape2D" parent="Area2D"]
+[node name="detectionCollision" type="CollisionShape2D" parent="detectionArea2D"]
 shape = SubResource("CircleShape2D_10cih")
 
 [node name="enemyCollision" type="CollisionShape2D" parent="."]
