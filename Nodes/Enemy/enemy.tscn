@@ -72,8 +72,8 @@ animation = &"idle"
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="detectionCollision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_10cih")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="enemyCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e358f")
