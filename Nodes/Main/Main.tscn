@@ -17,5 +17,6 @@ layer_2/tile_data = PackedInt32Array()
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("4_123e1")]
 
 [node name="Enemy" parent="." instance=ExtResource("4_ion8y")]
+position = Vector2(-23, 71)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_pxjaw")]

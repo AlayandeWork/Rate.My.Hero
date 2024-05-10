@@ -65,6 +65,8 @@ radius = 34.0588
 radius = 8.0
 
 [node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_50py7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -73,6 +75,8 @@ sprite_frames = SubResource("SpriteFrames_4n6vj")
 animation = &"idle"
 
 [node name="detectionArea2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
 
 [node name="detectionCollision" type="CollisionShape2D" parent="detectionArea2D"]
 shape = SubResource("CircleShape2D_10cih")
