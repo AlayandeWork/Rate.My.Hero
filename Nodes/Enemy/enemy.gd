@@ -1,26 +1,26 @@
 extends CharacterBody2D
 
-var speed = 40
-var friction = 100
-var acceleration = 100
-var is_chasingPlayer = false
-var player = null
-var target_posiiton = player.position
+var speed=40
+var friction=20
+var acceleration=30
+var player=null
+var isChasing=false
 
 
 func _physics_process(delta):
-	if is_chasingPlayer:
-		pass
+	if isChasing:
+		position=position.move_toward(player.position, speed * delta)
 	else:
-		pass
+		
+
 
 func _on_detection_area_2d_body_entered(body):
-	player = body
-	is_chasingPlayer=true
+	player==body
+	isChasing=true
 	print("Entered")
 
 
 func _on_detection_area_2d_body_exited(body):
-	player=null
-	is_chasingPlayer=false
+	player==null
+	isChasing=false
 	print("Exit")
