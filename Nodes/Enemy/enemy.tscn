@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cj3hejb33rf3q"]
+[gd_scene load_steps=11 format=3 uid="uid://cj3hejb33rf3q"]
 
 [ext_resource type="Texture2D" uid="uid://d2jrqopu876hm" path="res://Enemies/slime/slime_idle_spritesheet.png" id="1_b14a0"]
 
@@ -57,8 +57,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_10cih"]
+radius = 34.0588
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e358f"]
+radius = 8.0
+
 [node name="Enemy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_4n6vj")
 animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_10cih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e358f")
