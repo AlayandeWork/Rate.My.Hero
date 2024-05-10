@@ -79,3 +79,6 @@ shape = SubResource("CircleShape2D_10cih")
 
 [node name="enemyCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e358f")
+
+[connection signal="body_entered" from="detectionArea2D" to="." method="_on_detection_area_2d_body_entered"]
+[connection signal="body_exited" from="detectionArea2D" to="." method="_on_detection_area_2d_body_exited"]
