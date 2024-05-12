@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cj3hejb33rf3q"]
+[gd_scene load_steps=19 format=3 uid="uid://cj3hejb33rf3q"]
 
 [ext_resource type="Script" path="res://Nodes/Enemy/enemy.gd" id="1_50py7"]
 [ext_resource type="Texture2D" uid="uid://d2jrqopu876hm" path="res://Enemies/slime/slime_idle_spritesheet.png" id="1_b14a0"]
+[ext_resource type="Texture2D" uid="uid://b1ik5x437nxcu" path="res://Enemies/slime/slime_run_spritesheeet.png" id="3_6kkbr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxrjf"]
 atlas = ExtResource("1_b14a0")
@@ -25,6 +26,30 @@ region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gt45f"]
 atlas = ExtResource("1_b14a0")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s34ta"]
+atlas = ExtResource("3_6kkbr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohfco"]
+atlas = ExtResource("3_6kkbr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f707m"]
+atlas = ExtResource("3_6kkbr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv7os"]
+atlas = ExtResource("3_6kkbr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1mnh"]
+atlas = ExtResource("3_6kkbr")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h18qo"]
+atlas = ExtResource("3_6kkbr")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4n6vj"]
@@ -52,7 +77,25 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s34ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohfco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f707m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv7os")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1mnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h18qo")
+}],
 "loop": true,
 "name": &"run",
 "speed": 5.0
@@ -72,7 +115,7 @@ script = ExtResource("1_50py7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_4n6vj")
-animation = &"idle"
+animation = &"run"
 
 [node name="detectionArea2D" type="Area2D" parent="."]
 collision_layer = 4
