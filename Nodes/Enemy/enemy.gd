@@ -7,6 +7,11 @@ var player=null
 var isChasing=false
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+var enemyHealth=100
+var playerInsidePlayerHitbox=false
+var enemyDead=false
+var enemyCooldown = true
+
 
 func _physics_process(delta):
 	if isChasing:
@@ -18,17 +23,20 @@ func _physics_process(delta):
 func _on_detection_area_2d_body_entered(body):
 	player=body
 	isChasing=true
-	print("Entered")
 
 func _on_detection_area_2d_body_exited(body):
 	player=null
 	isChasing=false
-	print("Exit")
 
 
 func _on_hitbox_enemy_body_entered(body):
-	pass # Replace with function body.
+	if body.has_method("player"):
+		playerInsidePlayerHitbox=true
 
 
 func _on_hitbox_enemy_body_exited(body):
-	pass # Replace with function body.
+	if body.has_method("player"):
+		playerInsidePlayerHitbox=false
+	
+func enemy():
+	pass

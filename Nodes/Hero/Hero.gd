@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var speed : int = 160
-@export var friction : int = 600
-@export var acceleration : int = 800
+var speed = 160
+var friction = 600
+var acceleration = 800
 
-var playerHealth=100
-var enemyInsidePlayerHitbox=false
-var playerDead=false
+var playerHealth = 100
+var enemyInsidePlayerHitbox = false
+var playerDead = false
 var enemyCooldown = true
 
 
@@ -24,6 +24,7 @@ func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
+	enemyAttacking()
 	match state:
 		MOVE:
 			move_state(delta)
@@ -69,3 +70,10 @@ func _on_hitbox_hero_body_entered(body):
 func _on_hitbox_hero_body_exited(body):
 	if body.has_method("enemy"):
 		enemyInsidePlayerHitbox=false
+
+func player():
+	pass
+	
+func enemyAttacking():
+	if enemyInsidePlayerHitbox==true:
+		print("Attacking")

@@ -856,7 +856,7 @@ radius = 3.0
 height = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jonov"]
-radius = 20.0
+radius = 16.0
 
 [node name="Hero" type="CharacterBody2D"]
 process_mode = 3
@@ -897,5 +897,9 @@ shape = SubResource("CapsuleShape2D_pa7el")
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_jonov")
 
+[node name="invincibilityFrame" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="body_entered" from="hitboxHero" to="." method="_on_hitbox_hero_body_entered"]
 [connection signal="body_exited" from="hitboxHero" to="." method="_on_hitbox_hero_body_exited"]
+[connection signal="timeout" from="invincibilityFrame" to="." method="_on_invincibility_frame_timeout"]

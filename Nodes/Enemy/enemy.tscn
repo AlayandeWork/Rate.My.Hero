@@ -108,7 +108,7 @@ radius = 26.0
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2h5el"]
-radius = 16.0
+radius = 19.0
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 4
@@ -137,3 +137,5 @@ shape = SubResource("CircleShape2D_2h5el")
 
 [connection signal="body_entered" from="detectionArea2D" to="." method="_on_detection_area_2d_body_entered"]
 [connection signal="body_exited" from="detectionArea2D" to="." method="_on_detection_area_2d_body_exited"]
+[connection signal="body_entered" from="hitboxEnemy" to="." method="_on_hitbox_enemy_body_entered"]
+[connection signal="body_exited" from="hitboxEnemy" to="." method="_on_hitbox_enemy_body_exited"]
