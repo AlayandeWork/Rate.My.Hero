@@ -4,6 +4,12 @@ extends CharacterBody2D
 @export var friction : int = 600
 @export var acceleration : int = 800
 
+var playerHealth=100
+var enemyInsidePlayerHitbox=false
+var playerDead=false
+var enemyCooldown = true
+
+
 enum {
 	MOVE,
 	ATTACK,
@@ -53,3 +59,13 @@ func attack_state(_delta):
 	
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_hitbox_hero_body_entered(body):
+	if body.has_method("enemy"):
+		enemyInsidePlayerHitbox=true
+
+
+func _on_hitbox_hero_body_exited(body):
+	if body.has_method("enemy"):
+		enemyInsidePlayerHitbox=false

@@ -24,3 +24,11 @@ func _on_detection_area_2d_body_exited(body):
 	player=null
 	isChasing=false
 	print("Exit")
+
+
+func _on_hitbox_enemy_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_hitbox_enemy_body_exited(body):
+	pass # Replace with function body.
