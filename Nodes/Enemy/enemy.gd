@@ -1,42 +1,23 @@
 extends CharacterBody2D
 
-var speed=10
-var friction=20
-var acceleration=30
-var player=null
-var isChasing=false
-@onready var animated_sprite_2d = $AnimatedSprite2D
-
-var enemyHealth=100
-var playerInsidePlayerHitbox=false
-var enemyDead=false
-var enemyCooldown = true
-
+var player = null
+var isChasingPlayer = false
+var enemySpeed = 20
 
 func _physics_process(delta):
-	if isChasing:
-		position += (player.position - position)/speed
-		animated_sprite_2d.play("run")
+	if isChasingPlayer:
+		position += (player.position - position)/enemySpeed
+		print("Chasing Player")
 	else:
-		animated_sprite_2d.play("idle")
-
-func _on_detection_area_2d_body_entered(body):
-	player=body
-	isChasing=true
-
-func _on_detection_area_2d_body_exited(body):
-	player=null
-	isChasing=false
+		print("Not Chasing Player")
+		
+func _on_enemy_detection_area_body_entered(body):
+	if body.is_in_group("player"):
+		player=body
+		isChasingPlayer = true
 
 
-func _on_hitbox_enemy_body_entered(body):
-	if body.has_method("player"):
-		playerInsidePlayerHitbox=true
-
-
-func _on_hitbox_enemy_body_exited(body):
-	if body.has_method("player"):
-		playerInsidePlayerHitbox=false
-	
-func enemy():
-	pass
+func _on_enemy_detection_area_body_exited(body):
+	if body.is_in_group("player"):
+		player=body
+		isChasingPlayer = false

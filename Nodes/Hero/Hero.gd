@@ -6,7 +6,7 @@ var acceleration = 800
 
 var playerHealth = 100
 var enemyInsidePlayerHitbox = false
-var playerDead = false
+var playerIsalive= true
 var enemyCooldown = true
 
 
@@ -24,7 +24,6 @@ func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
-	enemyAttacking()
 	match state:
 		MOVE:
 			move_state(delta)
@@ -60,20 +59,3 @@ func attack_state(_delta):
 	
 func attack_animation_finished():
 	state = MOVE
-
-
-func _on_hitbox_hero_body_entered(body):
-	if body.has_method("enemy"):
-		enemyInsidePlayerHitbox=true
-
-
-func _on_hitbox_hero_body_exited(body):
-	if body.has_method("enemy"):
-		enemyInsidePlayerHitbox=false
-
-func player():
-	pass
-	
-func enemyAttacking():
-	if enemyInsidePlayerHitbox==true:
-		print("Attacking")
