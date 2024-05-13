@@ -1025,7 +1025,7 @@ size = Vector2(10, 15.75)
 [sub_resource type="CircleShape2D" id="CircleShape2D_w7q4v"]
 radius = 19.6469
 
-[node name="Hero" type="CharacterBody2D" groups=["player"]]
+[node name="Hero" type="CharacterBody2D"]
 process_mode = 3
 z_index = 2
 collision_layer = 2

@@ -9,8 +9,6 @@ var enemyInsidePlayerHitbox = false
 var playerIsalive= true
 var enemyCooldown = true
 
-var enemy=null
-
 
 enum {
 	MOVE,
@@ -26,12 +24,13 @@ func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
+	enemyIsAttacking()
 	match state:
 		MOVE:
 			move_state(delta)
 		ATTACK:
 			attack_state(delta)
-	
+			
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
@@ -62,11 +61,17 @@ func attack_state(_delta):
 func attack_animation_finished():
 	state = MOVE
 
+func player():
+	pass
 
 func _on_player_detection_area_body_entered(body):
 	if body.has_method("enemy"):
-		print("Attacking")
-
+		enemyInsidePlayerHitbox=true
 
 func _on_player_detection_area_body_exited(body):
-	pass 
+	if body.has_method("enemy"):
+		enemyInsidePlayerHitbox=false
+	
+func enemyIsAttacking():
+	if enemyInsidePlayerHitbox:
+		print("player is taking damage")
