@@ -9,6 +9,8 @@ var enemyInsidePlayerHitbox = false
 var playerIsalive= true
 var enemyCooldown = true
 
+var enemy=null
+
 
 enum {
 	MOVE,
@@ -62,7 +64,8 @@ func attack_animation_finished():
 
 
 func _on_player_detection_area_body_entered(body):
-	pass 
+	if body.has_method("enemy"):
+		print("Attacking")
 
 
 func _on_player_detection_area_body_exited(body):
