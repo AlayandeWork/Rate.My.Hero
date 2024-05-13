@@ -1065,3 +1065,6 @@ disabled = true
 
 [node name="playerDetectionAreaCollsion" type="CollisionShape2D" parent="playerDetectionArea"]
 shape = SubResource("CircleShape2D_w7q4v")
+
+[connection signal="body_entered" from="playerDetectionArea" to="." method="_on_player_detection_area_body_entered"]
+[connection signal="body_exited" from="playerDetectionArea" to="." method="_on_player_detection_area_body_exited"]

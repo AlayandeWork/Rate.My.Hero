@@ -59,3 +59,11 @@ func attack_state(_delta):
 	
 func attack_animation_finished():
 	state = MOVE
+
+
+func _on_player_detection_area_body_entered(body):
+	pass 
+
+
+func _on_player_detection_area_body_exited(body):
+	pass 
