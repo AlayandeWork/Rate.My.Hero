@@ -6,7 +6,7 @@ var acceleration = 800
 
 var enemyinside=false
 var playalive = true
-var enemyattackcooldown=false
+var enemyattackcooldown=true
 var health = 100
 
 enum {
@@ -18,12 +18,21 @@ var state = MOVE
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
+@onready var god_mode = $GodMode
 
 func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
-	#enemyattacking()
+	enemyattacking()
+	
+	if health<=0:
+		playalive=false
+		health=0
+		print("player is dead")
+		queue_free()
+		
+		
 	match state:
 		MOVE:
 			move_state(delta)
@@ -75,8 +84,11 @@ func _on_area_2d_body_exited(body):
 		print ("enemy has left player body")
 
 func enemyattacking():
-	if enemyinside:
+	if enemyinside and enemyattackcooldown==true:
 		health = health - 10
+		enemyattackcooldown=false
+		god_mode.start()
 		print(health)
-		if health <=0:
-			print ("player is dead")
+
+func _on_god_mode_timeout():
+	enemyattackcooldown=true
