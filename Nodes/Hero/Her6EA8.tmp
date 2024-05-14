@@ -1023,7 +1023,7 @@ transitions = ["Idle", "Run", SubResource("29"), "Run", "Idle", SubResource("30"
 graph_offset = Vector2(0, 185.851)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_po37k"]
-radius = 46.0109
+radius = 27.1662
 
 [node name="Player" type="CharacterBody2D"]
 process_mode = 3
@@ -1067,5 +1067,7 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_po37k")
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

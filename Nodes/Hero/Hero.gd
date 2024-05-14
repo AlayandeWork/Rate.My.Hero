@@ -4,6 +4,10 @@ var speed = 160
 var friction = 600
 var acceleration = 800
 
+var enemyinside=false
+var playalive = true
+var enemyattackcooldown=false
+var health = 100
 
 enum {
 	MOVE,
@@ -19,6 +23,7 @@ func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
+	#enemyattacking()
 	match state:
 		MOVE:
 			move_state(delta)
@@ -55,3 +60,23 @@ func attack_state(_delta):
 func attack_animation_finished():
 	state = MOVE
 
+func player():
+	pass
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("enemy"):
+		enemyinside=true
+		print ("enemy has entered player body")
+
+
+func _on_area_2d_body_exited(body):
+	if body.has_method("enemy"):
+		enemyinside=false
+		print ("enemy has left player body")
+
+func enemyattacking():
+	if enemyinside:
+		health = health - 10
+		print(health)
+		if health <=0:
+			print ("player is dead")

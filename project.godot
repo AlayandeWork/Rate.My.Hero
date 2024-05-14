@@ -28,6 +28,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
+theme/default_font_antialiasing=0
 common/drop_mouse_on_gui_input_disabled=true
 
 [input]
