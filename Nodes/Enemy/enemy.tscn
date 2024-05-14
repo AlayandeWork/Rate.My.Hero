@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cj3hejb33rf3q"]
+[gd_scene load_steps=18 format=3 uid="uid://cj3hejb33rf3q"]
 
 [ext_resource type="Script" path="res://Nodes/Enemy/enemy.gd" id="1_50py7"]
 [ext_resource type="Texture2D" uid="uid://d2jrqopu876hm" path="res://Enemies/slime/slime_idle_spritesheet.png" id="1_b14a0"]
@@ -104,9 +104,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_e358f"]
 radius = 9.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xqafn"]
-radius = 22.0
-
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 2
@@ -118,13 +115,3 @@ animation = &"run"
 
 [node name="enemyCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e358f")
-
-[node name="enemyDetectionArea" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="enemyDetectionCollisionShape" type="CollisionShape2D" parent="enemyDetectionArea"]
-shape = SubResource("CircleShape2D_xqafn")
-
-[connection signal="body_entered" from="enemyDetectionArea" to="." method="_on_enemy_detection_area_body_entered"]
-[connection signal="body_exited" from="enemyDetectionArea" to="." method="_on_enemy_detection_area_body_exited"]

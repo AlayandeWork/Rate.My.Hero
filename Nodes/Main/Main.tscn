@@ -1,22 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://ci16ad4l8ldv3"]
+[gd_scene load_steps=4 format=3 uid="uid://ci16ad4l8ldv3"]
 
 [ext_resource type="Script" path="res://Nodes/Main/Main.gd" id="1_20rjr"]
 [ext_resource type="PackedScene" uid="uid://cp8t45lxaw11f" path="res://Nodes/Main/LevelTileMap.tscn" id="2_86i67"]
 [ext_resource type="PackedScene" uid="uid://dapl3d2ypx668" path="res://Nodes/Menu/pause_menu.tscn" id="4_123e1"]
-[ext_resource type="PackedScene" uid="uid://cj3hejb33rf3q" path="res://Nodes/Enemy/enemy.tscn" id="4_ion8y"]
-[ext_resource type="PackedScene" uid="uid://cmarc8b8qvuwa" path="res://Nodes/Hero/Hero.tscn" id="5_pxjaw"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_20rjr")
-
-[node name="TileMap" parent="." instance=ExtResource("2_86i67")]
-layer_2/tile_data = PackedInt32Array()
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("4_123e1")]
 
-[node name="Hero" parent="." instance=ExtResource("5_pxjaw")]
-
-[node name="Enemy" parent="." instance=ExtResource("4_ion8y")]
-position = Vector2(-18, 54)
+[node name="TileMap" parent="." instance=ExtResource("2_86i67")]
+layer_2/tile_data = PackedInt32Array()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cmarc8b8qvuwa"]
+[gd_scene load_steps=39 format=3 uid="uid://cmarc8b8qvuwa"]
 
 [ext_resource type="Texture2D" uid="uid://cm6rlnpbhqtov" path="res://Hero/Player.png" id="1"]
 [ext_resource type="Script" path="res://Nodes/Hero/Hero.gd" id="2"]
@@ -1022,9 +1022,6 @@ graph_offset = Vector2(0, 185.851)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcog5"]
 size = Vector2(10, 15.75)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w7q4v"]
-radius = 19.6469
-
 [node name="Hero" type="CharacterBody2D"]
 process_mode = 3
 z_index = 2
@@ -1048,7 +1045,6 @@ libraries = {
 "": SubResource("AnimationLibrary_40b86")
 }
 tree_root = SubResource("16")
-advance_expression_base_node = NodePath("")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Attack/blend_position = Vector2(0, 0)
 parameters/Idle/blend_position = Vector2(-0.449606, 0.597884)
@@ -1060,11 +1056,3 @@ shape = SubResource("RectangleShape2D_qcog5")
 disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="playerDetectionArea" type="Area2D" parent="."]
-
-[node name="playerDetectionAreaCollsion" type="CollisionShape2D" parent="playerDetectionArea"]
-shape = SubResource("CircleShape2D_w7q4v")
-
-[connection signal="body_entered" from="playerDetectionArea" to="." method="_on_player_detection_area_body_entered"]
-[connection signal="body_exited" from="playerDetectionArea" to="." method="_on_player_detection_area_body_exited"]

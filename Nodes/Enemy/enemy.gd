@@ -16,15 +16,3 @@ func _physics_process(delta):
 			animated_sprite_2d.flip_h=false
 	else:
 		animated_sprite_2d.play("idle")
-		
-func _on_enemy_detection_area_body_entered(body):
-	player=body
-	isChasingPlayer = true
-
-
-func _on_enemy_detection_area_body_exited(body):
-	player=null
-	isChasingPlayer = false
-		
-func enemy():
-	pass
