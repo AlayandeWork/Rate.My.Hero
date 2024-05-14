@@ -6,3 +6,4 @@ res://Nodes/Main/Main.tscn
 res://Nodes/Enemy/enemy.gd
 res://Nodes/Hero/Hero.gd
 res://Nodes/Menu/pause_menu.gd
+res://Game_Manager.gd

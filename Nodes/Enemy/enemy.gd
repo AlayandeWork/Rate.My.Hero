@@ -3,9 +3,13 @@ extends CharacterBody2D
 var player = null
 var isChasingPlayer = false
 var enemySpeed = 20
+var enemyalive=true
+var playerattacking = false
+var enemyhealth=100
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _physics_process(_delta):
+	player_attacking()
 	if isChasingPlayer:
 		position += (player.position - position)/enemySpeed
 		animated_sprite_2d.play("run")
@@ -32,3 +36,24 @@ func _on_area_2d_body_exited(body):
 		player = null
 		isChasingPlayer=false
 		print("player has left enemy body")
+
+
+func _on_enemy_hit_box_body_entered(body):
+	if body.has_method("player"):
+		playerattacking=true
+
+
+func _on_enemy_hit_box_body_exited(body):
+	if body.has_method("player"):
+		playerattacking=false
+		
+func player_attacking():
+	if playerattacking and GameManager.player_is_attacking==true:
+		enemyhealth=enemyhealth-10
+		print("enemy health = ", enemyhealth)
+		if enemyhealth<=0:
+			enemyalive=false
+			enemyhealth=0
+			queue_free()
+			
+		

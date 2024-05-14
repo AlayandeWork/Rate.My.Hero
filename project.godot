@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2")
 [autoload]
 
 AudioPlayer="*res://Nodes/audio_manager/audio_player.tscn"
+GameManager="*res://GameManager.gd"
 
 [display]
 
