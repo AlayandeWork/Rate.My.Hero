@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://dapl3d2ypx668"]
+
+[ext_resource type="Script" path="res://Game Nodes/Menu/pause_menu.gd" id="1_qo74d"]
+[ext_resource type="Shader" path="res://Game Nodes/Menu/pause_menu.gdshader" id="2_w7qpo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nu7d8"]
+shader = ExtResource("2_w7qpo")
+shader_parameter/lod = 3.0
+
+[node name="Pause_Menu" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qo74d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_nu7d8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -33.0
+offset_right = 35.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenuButtons" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/PauseMenuButtons"]
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/PauseMenuButtons"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/PauseMenuButtons/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PauseMenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]

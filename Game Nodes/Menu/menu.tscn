@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://bkhqsx3geki5w"]
+
+[ext_resource type="Script" path="res://Game Nodes/Menu/menu.gd" id="1_j8f8h"]
+[ext_resource type="FontFile" uid="uid://j5l3x25b3syr" path="res://Game Nodes/Pixel_NES.otf" id="1_xx4c2"]
+[ext_resource type="Texture2D" uid="uid://b24ci0hlteu30" path="res://Game Nodes/Menu/main_menu_picture.jpg" id="2_rrwe5"]
+[ext_resource type="AudioStream" uid="uid://r18qfgkd77lh" path="res://Sounds/Menu Move.wav" id="4_dksho"]
+[ext_resource type="AudioStream" uid="uid://dlx1crjrgsq74" path="res://Sounds/Menu Select.wav" id="5_t71n8"]
+
+[sub_resource type="Theme" id="Theme_h4u62"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4ttg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8x04"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7xrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_305if"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jn5fw"]
+bg_color = Color(0.588235, 0.537255, 0.92549, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asga0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j8f8h")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rrwe5")
+expand_mode = 2
+
+[node name="MenuButtonsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_constants/separation = -1
+
+[node name="StartButton" type="Button" parent="MenuButtonsContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_bottom = NodePath("../OptionsButton")
+theme = SubResource("Theme_h4u62")
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
+theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r4ttg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c8x04")
+text = "Start"
+flat = true
+alignment = 0
+
+[node name="OptionsButton" type="Button" parent="MenuButtonsContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
+theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j7xrj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_305if")
+text = "Options"
+flat = true
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="MenuButtonsContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_colors/font_hover_color = Color(0.415686, 0.380392, 0.588235, 1)
+theme_override_colors/font_focus_color = Color(0.419608, 0.184314, 0.619608, 1)
+theme_override_fonts/font = ExtResource("1_xx4c2")
+theme_override_font_sizes/font_size = 6
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jn5fw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_asga0")
+text = "Exit"
+flat = true
+alignment = 0
+
+[node name="MovingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dksho")
+
+[node name="SelectingMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_t71n8")
+
+[connection signal="focus_entered" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="focus_entered" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/OptionsButton" to="." method="_on_options_menu_pressed"]
+[connection signal="focus_entered" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_focus_entered"]
+[connection signal="mouse_entered" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="pressed" from="MenuButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]

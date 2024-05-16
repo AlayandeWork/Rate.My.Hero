@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Rate My Hero"
-run/main_scene="res://Nodes/Main/Main.tscn"
+run/main_scene="res://Game Nodes/Main Level/Main_Level.tscn"
 config/features=PackedStringArray("4.2")
 
 [autoload]
 
-AudioPlayer="*res://Nodes/audio_manager/audio_player.tscn"
+AudioPlayer="*res://Game Nodes/Audio Manager/audio_player.tscn"
 GameManager="*res://GameManager.gd"
 
 [display]

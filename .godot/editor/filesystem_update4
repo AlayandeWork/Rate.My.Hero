@@ -2,3 +2,12 @@ res://default_env.tres
 res://Nodes/Hero/Hero.tscn
 res://Nodes/Menu/pause_menu.gdshader
 res://Nodes/Hero/Hero.gd
+res://Nodes/Main/Main.tscn
+res://Nodes/Player/Hero.tscn
+res://Nodes/Enemy/enemy.tscn
+res://Nodes/Main Level/Main.tscn
+res://Nodes/Player/Player.tscn
+res://Nodes/Main Level/Main_Level.tscn
+res://Nodes/Enemy/Enemy.tscn
+res://Game Nodes/Player/Player.tscn
+res://Game Nodes/Menu/pause_menu.gdshader
