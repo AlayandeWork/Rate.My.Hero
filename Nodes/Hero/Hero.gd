@@ -18,7 +18,7 @@ var state = MOVE
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
-@onready var god_mode = $GodMode
+@onready var player_cooldown = $playerCoolDown
 
 func _ready():
 	animationTree.active = true
@@ -60,13 +60,22 @@ func move_state(delta):
 	velocity = velocity
 	
 	if Input.is_action_pressed("Attack"):
+		GameManager.player_is_attacking=true
 		state = ATTACK
 		
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
 	
+	if enemyinside and GameManager.player_is_attacking:
+		var enemy = $Area2D.get_overlapping_bodies()[0]
+		var pushback_direction = (position - enemy.position).normalized()
+		var pushback_force = 1000
+		var pushback_impulse = pushback_direction * pushback_force
+		enemy.move_and_slide(pushback_impulse)
+		
 func attack_animation_finished():
+	GameManager.player_is_attacking=false
 	state = MOVE
 
 func player():
@@ -75,19 +84,19 @@ func player():
 func _on_area_2d_body_entered(body):
 	if body.has_method("enemy"):
 		enemyinside=true
-		print ("enemy has entered player body")
+		#print ("enemy has entered player body")
 
 
 func _on_area_2d_body_exited(body):
 	if body.has_method("enemy"):
 		enemyinside=false
-		print ("enemy has left player body")
+		#print ("enemy has left player body")
 
 func enemyattacking():
 	if enemyinside and enemyattackcooldown==true:
 		health = health - 10
 		enemyattackcooldown=false
-		god_mode.start()
+		player_cooldown.start()
 		print(health)
 
 func _on_god_mode_timeout():
