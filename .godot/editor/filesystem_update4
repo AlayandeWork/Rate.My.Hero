@@ -1,7 +1,4 @@
 res://default_env.tres
 res://Nodes/Hero/Hero.tscn
 res://Nodes/Menu/pause_menu.gdshader
-res://Nodes/Enemy/enemy.tscn
-res://Nodes/Main/Main.tscn
-res://Nodes/Enemy/enemy.gd
 res://Nodes/Hero/Hero.gd
