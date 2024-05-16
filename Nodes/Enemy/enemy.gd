@@ -7,13 +7,15 @@ var enemyalive=true
 var playerattacking = false
 var enemyhealth=100
 var playerattackcooldown=true
-var enemy_push_back_when_hit=100
+var enemy_push_back=Vector2.ZERO
 
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var enemy_cool_down = $enemyCoolDown
 
-func _physics_process(_delta):
+
+func _physics_process(delta):
+
 	player_attacking()
 	if isChasingPlayer:
 		position += (player.position - position)/enemySpeed
@@ -26,34 +28,27 @@ func _physics_process(_delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-func enemy():
-	pass
-
-
 func _on_area_2d_body_entered(body):
-	if body.has_method("player"):
+	if body.is_in_group("player"):
 		player=body
 		isChasingPlayer=true
-		#print("player has entered enemy body")
 
 func _on_area_2d_body_exited(body):
-	if body.has_method("player"):
+	if body.is_in_group("player"):
 		player = null
 		isChasingPlayer=false
-		#print("player has left enemy body")
-
 
 func _on_enemy_hit_box_body_entered(body):
-	if body.has_method("player"):
+	if body.is_in_group("player"):
 		playerattacking=true
 
-
 func _on_enemy_hit_box_body_exited(body):
-	if body.has_method("player"):
+	if body.is_in_group("player"):
 		playerattacking=false
 		
 func player_attacking():
 	if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
+
 		enemyhealth=enemyhealth-10
 		playerattackcooldown=false
 		enemy_cool_down.start()
@@ -63,8 +58,6 @@ func player_attacking():
 			enemyhealth=0
 			queue_free()
 			
-		
-
-
+	
 func _on_enemy_cool_down_timeout():
 	playerattackcooldown=true

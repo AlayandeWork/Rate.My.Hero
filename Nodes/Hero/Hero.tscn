@@ -1025,7 +1025,7 @@ graph_offset = Vector2(0, 185.851)
 [sub_resource type="CircleShape2D" id="CircleShape2D_po37k"]
 radius = 46.0109
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 process_mode = 3
 z_index = 2
 collision_layer = 2

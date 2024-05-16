@@ -66,31 +66,18 @@ func move_state(delta):
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
-	
-	if enemyinside and GameManager.player_is_attacking:
-		var enemy = $Area2D.get_overlapping_bodies()[0]
-		var pushback_direction = (position - enemy.position).normalized()
-		var pushback_force = 1000
-		var pushback_impulse = pushback_direction * pushback_force
-		enemy.move_and_slide(pushback_impulse)
 		
 func attack_animation_finished():
 	GameManager.player_is_attacking=false
 	state = MOVE
 
-func player():
-	pass
-
 func _on_area_2d_body_entered(body):
-	if body.has_method("enemy"):
+	if body.is_in_group("enemy"):
 		enemyinside=true
-		#print ("enemy has entered player body")
-
 
 func _on_area_2d_body_exited(body):
-	if body.has_method("enemy"):
+	if body.is_in_group("enemy"):
 		enemyinside=false
-		#print ("enemy has left player body")
 
 func enemyattacking():
 	if enemyinside and enemyattackcooldown==true:
