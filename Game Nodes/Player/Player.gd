@@ -1,30 +1,38 @@
 extends CharacterBody2D
 
-var speed = 160
-var friction = 600
-var acceleration = 800
 
+# DECLARING VARIBALES FOR THE PLAYER MOVEMENT 
+var Speed: int = 160
+var Friction: int = 600
+var Acceleration: int = 800
+
+# DECLARING VARIABLES TO CHECK THE DEATH OR ALIVE STATE
 var enemyinside=false
 var playalive = true
 var enemyattackcooldown=true
 var health = 100
 
+# DECLARING AN ENUMERATION TO DEFINE THE POSSIBLE STATES OF OUR PLAYER
 enum {
 	MOVE,
 	ATTACK,
 }
+
+# DECLARING A VARIABLE TO SET OUR DEFAULT STATE AS 'MOVE'
 var state = MOVE
 
+# REFERENCES TO VARIOUS NODES IN THE SCENE AND ATTACHING THEM TO A CUSTOM VARIABLE
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
-@onready var player_cooldown = $playerCoolDown
+@onready var player_cooldown = $Player_Cooldown
 
+# THE READY FUNCTION STARTS WHEN THE SCENE IS INITIALIZED(ACTIVATING THE ANIMATION TREE
 func _ready():
 	animationTree.active = true
 	
 func _physics_process(delta):
-	enemyattacking()
+	#enemyattacking()
 	
 	if health<=0:
 		playalive=false
@@ -32,7 +40,7 @@ func _physics_process(delta):
 		print("player is dead")
 		queue_free()
 		
-		
+	# CHECKS THE STATE VARIABLE AND CALLS THE APPROPRIATE STATE WHEN NEEDED	
 	match state:
 		MOVE:
 			move_state(delta)
@@ -50,10 +58,10 @@ func move_state(delta):
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * speed, acceleration * delta)
+		velocity = velocity.move_toward(input_vector * Speed, Acceleration * delta)
 	else:
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, Friction * delta)
 	
 	set_velocity(velocity)
 	move_and_slide()
