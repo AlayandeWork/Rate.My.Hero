@@ -47,6 +47,8 @@ func _physics_process(delta):
 		ATTACK:
 			attack_state(delta)
 			
+			
+# MOVE STATE FUNCTION, WITH MOVE STATE ANIMATIONS		
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("Right") - Input.get_action_strength("Left")
@@ -67,10 +69,12 @@ func move_state(delta):
 	move_and_slide()
 	velocity = velocity
 	
-	if Input.is_action_pressed("Attack"):
-		GameManager.player_is_attacking=true
-		state = ATTACK
+	#if Input.is_action_pressed("Attack"):
+		#GameManager.player_is_attacking=true
+		#state = ATTACK
 		
+		
+# ATTACK STATE FUNCTION WITH ANIMATIONS		
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
