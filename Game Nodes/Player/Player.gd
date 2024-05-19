@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 # DECLARING VARIBALES FOR THE PLAYER MOVEMENT 
-var Speed: int = 160
+var Speed: int = 150
 var Friction: int = 600
 var Acceleration: int = 800
 
@@ -22,14 +22,14 @@ enum {
 var state = MOVE
 
 # REFERENCES TO VARIOUS NODES IN THE SCENE AND ATTACHING THEM TO A CUSTOM VARIABLE
-@onready var animationPlayer = $AnimationPlayer
-@onready var animationTree = $AnimationTree
-@onready var animationState = animationTree.get("parameters/playback")
+@onready var animation_player = $AnimationPlayer
+@onready var animation_tree = $AnimationTree
+@onready var animationState = animation_tree.get("parameters/playback")
 @onready var player_cooldown = $Player_Cooldown
 
 # THE READY FUNCTION STARTS WHEN THE SCENE IS INITIALIZED (STARTS WHATEVER IS IN THE FUNCTION FIRST)
 func _ready():
-	animationTree.active = true
+	animation_tree.active = true
 	
 func _physics_process(delta):
 	#CONSTANTLY CHECKING FOR THESE FUNCTIONS
@@ -53,9 +53,9 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		animationTree.set("parameters/Idle/blend_position", input_vector)
-		animationTree.set("parameters/Run/blend_position", input_vector)
-		animationTree.set("parameters/Attack/blend_position", input_vector)
+		animation_tree.set("parameters/Idle/blend_position", input_vector)
+		animation_tree.set("parameters/Run/blend_position", input_vector)
+		animation_tree.set("parameters/Attack/blend_position", input_vector)
 		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * Speed, Acceleration * delta)
 	else:
@@ -66,23 +66,28 @@ func move_state(delta):
 	move_and_slide()
 	velocity = velocity
 	
-	#if Input.is_action_pressed("Attack"):
+	if Input.is_action_pressed("Attack"):
 		#GameManager.player_is_attacking=true
-		#state = ATTACK
+		state = ATTACK
 		
+		
+# WHEN THE ATTACK ANIMATION IS FINISHED, THIS FUNCTION RETURNS THE PLAYER TO THE MOVE STATE		
+func attack_animation_finished():
+	state = MOVE
 		
 # ATTACK STATE FUNCTION WITH ANIMATIONS		
 func attack_state(_delta):
 	velocity = Vector2.ZERO
 	animationState.travel("Attack")
-
+	
+		
 # THE FUNCTION FOR WHEN THE ENEMY IS ATTACKING THE PLAYER 
 func enemy_is_attacking():
 	if enemy_is_inside and attack_enemy_cooldown:
-		player_health = player_health - 10
+		player_health -= 10
 		attack_enemy_cooldown=false
 		player_cooldown.start()
-		print("Player Health is " + player_health)
+		print("Player Health is " + str(player_health))
 
 # THE FUNCTION FOR WHEN THE PLAYER IS DEAD OR PLAYER HEALTH IS ZERO	
 func player_is_dead():
@@ -92,9 +97,6 @@ func player_is_dead():
 		print("The Player is Dead")
 		queue_free() # RESTART THE GAME OR QUIT
 			
-#func attack_animation_finished():
-	#GameManager.player_is_attacking=false
-	#state = MOVE
 
 #func _on_area_2d_body_entered(body):
 	#if body.is_in_group("enemy"):

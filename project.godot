@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rate My Hero"
-run/main_scene="res://Game Nodes/Main Level/Main_Level.tscn"
+run/main_scene="res://Game Nodes/Player/Player.tscn"
 config/features=PackedStringArray("4.2")
 
 [autoload]
