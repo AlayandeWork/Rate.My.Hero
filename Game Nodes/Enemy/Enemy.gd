@@ -28,23 +28,23 @@ func _physics_process(delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-func _on_area_2d_body_entered(body):
-	if body.is_in_group("player"):
-		player=body
-		isChasingPlayer=true
-
-func _on_area_2d_body_exited(body):
-	if body.is_in_group("player"):
-		player = null
-		isChasingPlayer=false
-
-func _on_enemy_hit_box_body_entered(body):
-	if body.is_in_group("player"):
-		playerattacking=true
-
-func _on_enemy_hit_box_body_exited(body):
-	if body.is_in_group("player"):
-		playerattacking=false
+#func _on_area_2d_body_entered(body):
+	#if body.is_in_group("player"):
+		#player=body
+		#isChasingPlayer=true
+#
+#func _on_area_2d_body_exited(body):
+	#if body.is_in_group("player"):
+		#player = null
+		#isChasingPlayer=false
+#
+#func _on_enemy_hit_box_body_entered(body):
+	#if body.is_in_group("player"):
+		#playerattacking=true
+#
+#func _on_enemy_hit_box_body_exited(body):
+	#if body.is_in_group("player"):
+		#playerattacking=false
 		
 func player_attacking():
 	if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
