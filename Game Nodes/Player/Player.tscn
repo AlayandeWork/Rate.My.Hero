@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cmarc8b8qvuwa"]
+[gd_scene load_steps=39 format=3 uid="uid://cmarc8b8qvuwa"]
 
 [ext_resource type="Script" path="res://Game Nodes/Player/Player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cm6rlnpbhqtov" path="res://Resources/Player Items/Player.png" id="2_exwb1"]
@@ -1142,9 +1142,6 @@ graph_offset = Vector2(0, 185.851)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qcog5"]
 size = Vector2(10, 15.75)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_po37k"]
-radius = 46.0109
-
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 process_mode = 3
 z_index = 2
@@ -1163,11 +1160,8 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_40b86")
-}
 tree_root = SubResource("16")
-anim_player = NodePath("../AnimationPlayer")
+advance_expression_base_node = NodePath("")
 parameters/Attack/blend_position = Vector2(0, 0)
 parameters/Idle/blend_position = Vector2(-0.449606, 0.597884)
 parameters/Run/blend_position = Vector2(0, 0)
@@ -1179,16 +1173,7 @@ disabled = true
 
 [node name="Player_Camera" type="Camera2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_po37k")
-
 [node name="Player_Cooldown" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Player_Cooldown" to="." method="_on_god_mode_timeout"]
