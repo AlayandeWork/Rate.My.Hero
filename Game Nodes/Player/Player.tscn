@@ -1363,6 +1363,8 @@ disabled = true
 wait_time = 0.5
 
 [node name="Player_Attack_Area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="Player_Attack_Collision" type="CollisionShape2D" parent="Player_Attack_Area"]
 visible = false
@@ -1371,3 +1373,5 @@ shape = SubResource("RectangleShape2D_tpswy")
 disabled = true
 
 [connection signal="timeout" from="Player_Cooldown" to="." method="_on_god_mode_timeout"]
+[connection signal="body_entered" from="Player_Attack_Area" to="." method="_on_player_attack_area_body_entered"]
+[connection signal="body_exited" from="Player_Attack_Area" to="." method="_on_player_attack_area_body_exited"]

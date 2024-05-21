@@ -108,3 +108,15 @@ func player_is_dead():
 
 #func _on_god_mode_timeout():
 	#enemyattackcooldown=true
+
+
+func _on_player_attack_area_body_entered(body):
+	if body.is_in_group("enemy"):
+		enemy_is_inside = true
+		print("Entered") # Replace with function body.
+
+
+func _on_player_attack_area_body_exited(body):
+	if body.is_in_group("enemy"):
+		enemy_is_inside = false
+		print("Exit")
