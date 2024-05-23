@@ -64,3 +64,13 @@ func _physics_process(delta):
 	
 #func _on_enemy_cool_down_timeout():
 	#playerattackcooldown=true
+
+
+func _on_enemy_follow_area_body_entered(body):
+	if body.is_in_group("player"):
+		print("Player has Entered")
+
+
+func _on_enemy_follow_area_body_exited(body):
+	if body.is_in_group("player"):
+		print("Player has Exited")
