@@ -18,7 +18,7 @@ var Attack_Player_Cooldown=true
 func _physics_process(delta):
 	
 # CHASE THE PLAYER IF "ENEMY CHASING PLAYER" IS TRUE
-	player_attacking()
+	#player_attacking()
 	if Enemy_Chasing_Player == true:
 		position += (player.position - position)/Enemy_Speed # LOOK FOR BETTER WAY
 		animated_sprite_2d.play("run")
