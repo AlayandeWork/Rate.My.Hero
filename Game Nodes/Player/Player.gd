@@ -33,7 +33,7 @@ func _ready():
 	
 func _physics_process(delta):
 	#CONSTANTLY CHECKING FOR THESE FUNCTIONS
-	enemy_is_attacking()
+	#enemy_is_attacking()
 	player_is_dead()
 	
 		
@@ -67,7 +67,6 @@ func move_state(delta):
 	velocity = velocity
 	
 	if Input.is_action_pressed("Attack"):
-		#GameManager.player_is_attacking=true
 		state = ATTACK
 		
 		
@@ -82,12 +81,12 @@ func attack_state(_delta):
 	
 		
 # THE FUNCTION FOR WHEN THE ENEMY IS ATTACKING THE PLAYER 
-func enemy_is_attacking():
-	if enemy_is_inside and attack_enemy_cooldown:
-		player_health -= 10
-		attack_enemy_cooldown=false
-		player_cooldown.start()
-		print("Player Health is " + str(player_health))
+#func enemy_is_attacking():
+	#if enemy_is_inside and attack_enemy_cooldown:
+		#player_health -= 10
+		#attack_enemy_cooldown=false
+		#player_cooldown.start()
+		#print("Player Health is " + str(player_health))
 
 # THE FUNCTION FOR WHEN THE PLAYER IS DEAD OR PLAYER HEALTH IS ZERO	
 func player_is_dead():

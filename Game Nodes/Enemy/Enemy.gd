@@ -1,17 +1,17 @@
 extends CharacterBody2D
 
 var player = null
-var isChasingPlayer = false
-var enemySpeed = 10
-var enemyalive=true
-var playerattacking = false
-var enemyhealth=100
-var playerattackcooldown=true
-var enemy_push_back=Vector2.ZERO
+var Enemy_Chasing_Player = false
+var Enemy_Speed = 10
+var Enemy_Alive=true
+var Player_is_Attacking = false
+var Enemy_Health=100
+var Attack_Player_Cooldown=true
+#var enemy_push_back=Vector2.ZERO # PUSH BACK WHEN ENEMY IS HIT FOR LATER
 
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var enemy_cool_down = $enemyCoolDown
+@onready var enemy_cooldown = $Enemy_Cooldown
 
 
 func _physics_process(delta):

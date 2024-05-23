@@ -117,7 +117,7 @@ animation = &"run"
 [node name="enemyCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e358f")
 
-[node name="enemyCoolDown" type="Timer" parent="."]
+[node name="Enemy_Cooldown" type="Timer" parent="."]
 wait_time = 0.5
 
-[connection signal="timeout" from="enemyCoolDown" to="." method="_on_enemy_cool_down_timeout"]
+[connection signal="timeout" from="Enemy_Cooldown" to="." method="_on_enemy_cool_down_timeout"]
