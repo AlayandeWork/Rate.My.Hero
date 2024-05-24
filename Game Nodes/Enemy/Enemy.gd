@@ -3,7 +3,7 @@ extends CharacterBody2D
 # DECLARING VARIBALES FOR THE ENEMY MOVEMENT 
 var player = null
 var Enemy_Chasing_Player = false
-var Enemy_Speed = 10
+var Enemy_Speed = 70
 var Enemy_Alive=true
 var Player_is_Attacking = false
 var Enemy_Health=100
@@ -31,23 +31,6 @@ func _physics_process(delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-#func _on_area_2d_body_entered(body):
-	#if body.is_in_group("player"):
-		#player=body
-		#isChasingPlayer=true
-#
-#func _on_area_2d_body_exited(body):
-	#if body.is_in_group("player"):
-		#player = null
-		#isChasingPlayer=false
-#
-#func _on_enemy_hit_box_body_entered(body):
-	#if body.is_in_group("player"):
-		#playerattacking=true
-#
-#func _on_enemy_hit_box_body_exited(body):
-	#if body.is_in_group("player"):
-		#playerattacking=false
 		
 #func player_attacking():
 	#if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
@@ -68,9 +51,23 @@ func _physics_process(delta):
 
 func _on_enemy_follow_area_body_entered(body):
 	if body.is_in_group("player"):
+		player = body
+		Enemy_Chasing_Player = true
 		print("Player has Entered")
 
 
 func _on_enemy_follow_area_body_exited(body):
 	if body.is_in_group("player"):
+		player = null
+		Enemy_Chasing_Player = false
 		print("Player has Exited")
+
+
+func _on_enemy_hitbox_area_body_entered(body):
+	if body.is_in_group("player"):
+		Player_is_Attacking = true
+
+
+func _on_enemy_hitbox_area_body_exited(body):
+	if body.is_in_group("player"):
+		Player_is_Attacking = false
