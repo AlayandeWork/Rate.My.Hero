@@ -31,23 +31,6 @@ func _physics_process(delta):
 	else:
 		animated_sprite_2d.play("idle")
 
-		
-#func player_attacking():
-	#if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
-#
-		#enemyhealth=enemyhealth-10
-		#playerattackcooldown=false
-		#enemy_cool_down.start()
-		#print("enemy health = ", enemyhealth)
-		#if enemyhealth<=0:
-			#enemyalive=false
-			#enemyhealth=0
-			#queue_free()
-			
-	
-#func _on_enemy_cool_down_timeout():
-	#playerattackcooldown=true
-
 
 func _on_enemy_follow_area_body_entered(body):
 	if body.is_in_group("player"):
@@ -71,3 +54,20 @@ func _on_enemy_hitbox_area_body_entered(body):
 func _on_enemy_hitbox_area_body_exited(body):
 	if body.is_in_group("player"):
 		Player_is_Attacking = false
+
+
+#func player_attacking():
+	#if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
+#
+		#enemyhealth=enemyhealth-10
+		#playerattackcooldown=false
+		#enemy_cool_down.start()
+		#print("enemy health = ", enemyhealth)
+		#if enemyhealth<=0:
+			#enemyalive=false
+			#enemyhealth=0
+			#queue_free()
+			
+	
+#func _on_enemy_cool_down_timeout():
+	#playerattackcooldown=true
