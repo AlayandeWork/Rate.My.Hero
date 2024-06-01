@@ -79,6 +79,7 @@ Escape={
 2d_physics/layer_1="WORLD"
 2d_physics/layer_2="PLAYER"
 2d_physics/layer_3="HAZARD"
+2d_physics/layer_4="WEAPON"
 
 [physics]
 

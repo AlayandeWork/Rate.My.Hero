@@ -18,7 +18,7 @@ var Attack_Player_Cooldown=true
 func _physics_process(delta):
 	
 # CHASE THE PLAYER IF "ENEMY CHASING PLAYER" IS TRUE
-	#player_attacking()
+	player_attack()
 	if Enemy_Chasing_Player == true:
 		position += (player.position - position)/Enemy_Speed # LOOK FOR BETTER WAY
 		animated_sprite_2d.play("run")
@@ -47,14 +47,26 @@ func _on_enemy_follow_area_body_exited(body):
 
 
 func _on_enemy_hitbox_area_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("weapon"):
 		Player_is_Attacking = true
 
 
 func _on_enemy_hitbox_area_body_exited(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("weapon"):
 		Player_is_Attacking = false
-
+		
+		
+	
+func player_attack():
+	if Player_is_Attacking:
+		Enemy_Health = Enemy_Health - 10
+		#enemy_cooldown = false
+		#enemy_cooldown.start()
+		print ("Enemy Health = ", Enemy_Health)
+		if Enemy_Health <= 0:
+			Enemy_Alive = false
+			Enemy_Health = 0
+			queue_free()
 
 #func player_attacking():
 	#if playerattacking and GameManager.player_is_attacking and playerattackcooldown==true:
@@ -67,7 +79,5 @@ func _on_enemy_hitbox_area_body_exited(body):
 			#enemyalive=false
 			#enemyhealth=0
 			#queue_free()
-			
-	
-#func _on_enemy_cool_down_timeout():
-	#playerattackcooldown=true
+func _on_enemy_cooldown_timeout():
+	enemy_cooldown = true
