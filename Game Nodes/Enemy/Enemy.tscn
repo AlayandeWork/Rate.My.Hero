@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cj3hejb33rf3q"]
+[gd_scene load_steps=21 format=3 uid="uid://cj3hejb33rf3q"]
 
 [ext_resource type="Script" path="res://Game Nodes/Enemy/Enemy.gd" id="1_50py7"]
 [ext_resource type="Texture2D" uid="uid://d2jrqopu876hm" path="res://Enemies/slime/slime_idle_spritesheet.png" id="1_b14a0"]
@@ -107,9 +107,23 @@ radius = 9.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_f5chl"]
 radius = 52.0
 
+[sub_resource type="GDScript" id="GDScript_3e5l6"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_si42l"]
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 z_index = 2
 collision_layer = 4
 collision_mask = 2
@@ -134,7 +148,8 @@ shape = SubResource("CircleShape2D_f5chl")
 
 [node name="Enemy_Hitbox_Area" type="Area2D" parent="."]
 collision_layer = 4
-collision_mask = 8
+collision_mask = 10
+script = SubResource("GDScript_3e5l6")
 
 [node name="Enemy_Hitbox_Collision" type="CollisionShape2D" parent="Enemy_Hitbox_Area"]
 shape = SubResource("CircleShape2D_si42l")

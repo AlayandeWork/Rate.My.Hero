@@ -47,8 +47,9 @@ func _on_enemy_follow_area_body_exited(body):
 
 
 func _on_enemy_hitbox_area_body_entered(body):
-	if body.is_in_group("weapon"):
-		Player_is_Attacking = true
+	if body.has_method("weapon"):
+		print ("weapon")
+		#Player_is_Attacking = true
 
 
 func _on_enemy_hitbox_area_body_exited(body):
