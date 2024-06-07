@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1717641799
-default_env.tres::Environment::5132921972961010410::1717403880::0::1::::<><>::
-GameManager.gd::GDScript::-1::1715659655::0::1::::<>Node<>::
+::res://::1717736098
+default_env.tres::Environment::5132921972961010410::1717651365::0::1::::<><>::
+GameManager.gd::GDScript::-1::1717651385::0::1::::<>Node<>::
 README.md::TextFile::-1::1713724649::0::1::::<><>::
 ::res://Enemies/::1712796605
 ::res://Enemies/flying creature/::1712093583
@@ -68,25 +68,25 @@ Pixel_NES.otf::FontFile::694350065626146681::1712093583::1715877696::1::::<><>::
 ::res://Game Nodes/Audio Manager/::1715973278
 audio_player.gd::GDScript::-1::1715973278::0::1::::<>AudioStreamPlayer<>::
 audio_player.tscn::PackedScene::503287140941159770::1715877695::0::1::::<><>::res://Game Nodes/Audio Manager/audio_player.gd
-::res://Game Nodes/Enemy/::1717228035
+::res://Game Nodes/Enemy/::1717646177
 Enemy.gd::GDScript::-1::1717227856::0::1::::<>CharacterBody2D<>::
-Enemy.tscn::PackedScene::5462776174932392036::1717228035::0::1::::<><>::res://Game Nodes/Enemy/Enemy.gd<>uid://d2jrqopu876hm::::res://Enemies/slime/slime_idle_spritesheet.png<>uid://b1ik5x437nxcu::::res://Enemies/slime/slime_run_spritesheeet.png
-::res://Game Nodes/Main Level/::1717403881
+Enemy.tscn::PackedScene::5462776174932392036::1717646177::0::1::::<><>::res://Game Nodes/Enemy/Enemy.gd<>uid://d2jrqopu876hm::::res://Enemies/slime/slime_idle_spritesheet.png<>uid://b1ik5x437nxcu::::res://Enemies/slime/slime_run_spritesheeet.png
+::res://Game Nodes/Main Level/::1717651365
 Main_Level.gd::GDScript::-1::1716323765::0::1::::<>Node2D<>::
-Main_Level.tscn::PackedScene::5389908367785479546::1717403881::0::1::::<><>::res://Game Nodes/Main Level/Main_Level.gd<>uid://dapl3d2ypx668::::res://Game Nodes/Menu/pause_menu.tscn<>uid://cmarc8b8qvuwa::::res://Game Nodes/Player/Player.tscn<>uid://cj3hejb33rf3q::::res://Game Nodes/Enemy/Enemy.tscn
+Main_Level.tscn::PackedScene::5389908367785479546::1717651365::0::1::::<><>::res://Game Nodes/Main Level/Main_Level.gd<>uid://dapl3d2ypx668::::res://Game Nodes/Menu/pause_menu.tscn<>uid://cmarc8b8qvuwa::::res://Game Nodes/Player/Player.tscn<>uid://cj3hejb33rf3q::::res://Game Nodes/Enemy/Enemy.tscn
 Main_Level_Tile_Map.tscn::PackedScene::5895005492465728561::1715537217::0::1::::<><>::uid://di4ecwt2xabcv::::res://full tilemap.png
-::res://Game Nodes/Menu/::1717403945
+::res://Game Nodes/Menu/::1717698159
 main_menu_picture.jpg::CompressedTexture2D::4341523461547226897::1713744902::1715877697::1::::<><>::
 menu.gd::GDScript::-1::1713986589::0::1::::<>Control<>::
 menu.tscn::PackedScene::3103764632096333058::1715877695::0::1::::<><>::res://Game Nodes/Menu/menu.gd<>uid://j5l3x25b3syr::::res://Game Nodes/Pixel_NES.otf<>uid://b24ci0hlteu30::::res://Game Nodes/Menu/main_menu_picture.jpg<>uid://r18qfgkd77lh::::res://Sounds/Menu Move.wav<>uid://dlx1crjrgsq74::::res://Sounds/Menu Select.wav
 options.gd::GDScript::-1::1714173702::0::1::::<>Control<>::
 options.tscn::PackedScene::6568890585583584856::1715877695::0::1::::<><>::res://Game Nodes/Menu/options.gd<>uid://b24ci0hlteu30::::res://Game Nodes/Menu/main_menu_picture.jpg<>uid://j5l3x25b3syr::::res://Game Nodes/Pixel_NES.otf<>uid://dlx1crjrgsq74::::res://Sounds/Menu Select.wav<>uid://r18qfgkd77lh::::res://Sounds/Menu Move.wav
 pause_menu.gd::GDScript::-1::1715648594::0::1::::<>Control<>::
-pause_menu.gdshader::Shader::-1::1717403945::0::1::::<><>::
+pause_menu.gdshader::Shader::-1::1717698159::0::1::::<><>::
 pause_menu.tscn::PackedScene::7190945806931173795::1715877695::0::1::::<><>::res://Game Nodes/Menu/pause_menu.gd<>res://Game Nodes/Menu/pause_menu.gdshader
-::res://Game Nodes/Player/::1717228035
+::res://Game Nodes/Player/::1717646177
 Player.gd::GDScript::-1::1717227553::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::5616144987844389188::1717228035::0::1::::<><>::res://Game Nodes/Player/Player.gd<>uid://cm6rlnpbhqtov::::res://Resources/Player Items/Player.png<>res://Game Nodes/Player/Player_Attack_Area.gd<>res://Game Nodes/Player/Player_Attack_Collision.gd
+Player.tscn::PackedScene::5616144987844389188::1717646177::0::1::::<><>::res://Game Nodes/Player/Player.gd<>uid://cm6rlnpbhqtov::::res://Resources/Player Items/Player.png<>res://Game Nodes/Player/Player_Attack_Area.gd<>res://Game Nodes/Player/Player_Attack_Collision.gd
 Player_Attack_Area.gd::GDScript::-1::1717227704::0::1::::<>Area2D<>::
 Player_Attack_Collision.gd::GDScript::-1::1717227690::0::1::::<>CollisionShape2D<>::
 ::res://Resources/::1715877887
