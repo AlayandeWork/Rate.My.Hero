@@ -1,3 +1,4 @@
 res://default_env.tres
 res://Game Nodes/Player/Player.tscn
 res://Game Nodes/Menu/pause_menu.gdshader
+res://Game Nodes/Player/Player.gd
