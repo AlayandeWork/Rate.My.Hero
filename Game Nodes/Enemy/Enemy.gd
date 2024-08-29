@@ -9,7 +9,7 @@ var Player_is_Attacking = false
 var Enemy_Health=100
 var Attack_Player_Cooldown=true
 #var enemy_push_back=Vector2.ZERO # PUSH BACK WHEN ENEMY IS HIT FOR LATER
-
+uu
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var enemy_cooldown = $Enemy_Cooldown
