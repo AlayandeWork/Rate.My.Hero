@@ -1,4 +1,4 @@
-hhhhhhggghhjgfextends Node
+sharehhhhhhggghhjgfextends Node
 
 ###
 var player_is_attacking=false
