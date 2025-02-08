@@ -1,3 +1,3 @@
-	ghhhtvar player_is_attacking=false
+gh	ghhhtvar player_is_attacking=false
 var 
 hhh
