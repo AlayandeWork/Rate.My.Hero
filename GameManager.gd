@@ -1,3 +1,3 @@
-gggggttfccxxdbdjsjhbvgh	ghhhtvar player_is_attacking=false
+endsbgggggttfccxxdbdjsjhbvgh	ghhhtvar player_is_attacking=false
 var 
 hhh
