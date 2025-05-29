@@ -1,1 +1,1 @@
-pppppppppplayer_is_attacking=false
+ppppppppplayer_is_attacking=false
